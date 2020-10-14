@@ -1,92 +1,55 @@
-* 
-  padding: 0
-  margin: 0
+@import "reset"
+@import "vars"
+@import "extends"
+@import "mixins"
 
 
 body
-  font-family: 'Lato', sans-serif
+  font-family: $main-font
 
-a 
+a
   text-decoration: none
   transition: color 0.5s
 
-.header 
+.container
+  width: 1140px
+  margin: 0 auto
+
+.header
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17)
   border: 1px solid #ececec
   background-color: #ffffff
   height: 100px
 
-.container 
-  width: 1140px
-  margin: 0 auto
+.header__content
+  height: 100%
+  @extend %space-between
 
-.form__browse 
-  color: #222222
-  font-size: 14px
-  font-weight: 500
-  letter-spacing: 0.35px
+.header__block
+  @extend %align-items
 
-.form__browse::-webkit-details-marker 
-  display: none
-
-.logo 
-  color: #222222
+.header__logo
+  color: $text-color
   font-size: 27px
   font-weight: 300
   text-transform: uppercase
-  display: flex
-  align-items: center
+  @extend %align-items
 
-.logo_d 
-  color: #f16d7f
-  font-weight: 400
-  letter-spacing: 0.68px
+  img
+    margin-right: 13px
 
-.header__content
-  height: 100%
-  display: flex
-  justify-content: space-between
+  span
+    color: $site-color
+    font-weight: 400
+    letter-spacing: 0.68px
 
-.header__block 
-  display: flex
-  align-items: center
-
-.header__form 
-  display: flex
-  align-items: center
+.header__form
+  @extend %align-items
   margin-left: 37px
+  label
+    display: none
 
-.logo__img 
-  margin-right: 13px
-
-.botton 
-  color: #ffffff
-  background-color: #f16d7f
-  font-size: 15px
-  font-weight: 400
-  letter-spacing: 0.38px
-  height: 38px
-  line-height: 38px
-  padding-left: 19px
-  padding-right: 19px
-  outline: 1px solid #f16d7f
-  transition: color 0.5s, background-color 0.5s, outline-color 0.5s
-
-.botton:hover 
-  background-color: #fff
-  color: #f16d7f
-
-.header__cart 
-  margin-right: 16px
-  padding: 10px
-
-.header__cart:hover 
-  box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2)
-  border-radius: 12px
-  padding: 10px
-  transition: box-shadow 0.3s linear
-
-.form__browse_botton 
+.form__browse__button
   border-radius: 3px 0 0 3px
   border: 1px solid #e6e6e6
   background-color: #cdcdcc
@@ -96,93 +59,76 @@ a
   line-height: 38px
   position: relative
 
+.form__browse
+  color: $text-color
+  +font(14px, 500, 0.35px)
 
+.form__browse::-webkit-details-marker
+  display: none
 
-
-.symbol:after 
+.symbol:after
   content: "\f0d7"
-  font-family: FontAwesome
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
   margin-left: 8px
 
+.form__drop
+  @extend %column
+  justify-content: flex-start
+  align-items: flex-start
+  position: absolute
+  left: 0
+  top: 40px
+  width: 262px
+  padding: 19px 0 0 15px
+  background-color: #fff
+  border-radius: 5px
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
+  z-index: 1
 
-.shopping_cart__symbol:after
-  content: "\f0d7"
-  font-family: FontAwesome
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-  margin-left: 235px
+.form__drop::after,
+.form__drop::before
+  content: ''
+  position: absolute
+  background: #fff
+  left: 69px
+  top: -5px
+  width: 10px
+  height: 10px
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
+  /* Добавляем тень для уголка */
+  z-index: -1
+  transform: rotate(45deg)
+  -webkit-transform: rotate(45deg)
 
+.form__drop::before
+  z-index: 1
 
-.product__description_choose_symbol:after
-  content: "\f107"
-  font-family: FontAwesome
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-  margin-left: 60px
+.drop__name
+  color: #232323
+  +font(14px, 700, 0.35px)
+  text-transform: uppercase
 
+.drop__hr
+  width: 90%
+  height: 2px
+  background-color: #e8e8e8
+  text-decoration: none
+  border: none
 
-.product__description_choose_symbol1:after
-  content: "\f107"
-  font-family: FontAwesome
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-  margin-left: 80px
+.drop__menu
+  list-style-type: none
+  padding-left: 5px
+  margin-bottom: 19px
 
+.drop__a
+  color: #4f4f4f
+  +font(14px, 400, 0.35px)
 
-.symbol__aside_1:after
-  content: "\f0d7"
-  font-family: FontAwesome
-  color: #6f6e6e
-  margin-left: 136px
-  transition: color 1s
+.drop__a:hover
+  color: $site-color
 
-
-.symbol__aside_2:after
-  content: "\f0d7"
-  font-family: FontAwesome
-  color: #6f6e6e
-  margin-left: 159px
-  transition: color 1s
-
-
-.symbol__aside_3:after
-  content: "\f0d7"
-  font-family: FontAwesome
-  color: #6f6e6e
-  margin-left: 141px
-  transition: color 1s
-
-
-details.products__category[open] .symbol__aside_1:after
-  content: "\f0d8"
-  font-family: FontAwesome
-  color: #ef5b70
-
-
-details.products__category[open] .symbol__aside_2:after
-  content: "\f0d8"
-  font-family: FontAwesome
-  color: #ef5b70
-
-
-details.products__category[open] .symbol__aside_3:after
-  content: "\f0d8"
-  font-family: FontAwesome
-  color: #ef5b70
-
-
-
-
-
-
-
-.form
+.header__form__input
   border-radius: 0 3px 3px 0
   border: 1px solid #e6e6e6
   background-color: #ffffff
@@ -190,6 +136,227 @@ details.products__category[open] .symbol__aside_3:after
   width: 252px
   margin-left: -1px
   padding: 0 15px
+
+.header__form__input:after
+  content: "\f002"
+  font-family: $icon-font
+  color: #a4a4a4
+  +font(14px, 400, 0.35px)
+
+.header__form__button
+  margin-left: -1px
+  border-radius: 0 3px 3px 0
+  border: 1px solid #e6e6e6
+  background-color: #ffffff
+  height: 41px
+  width: 36px
+  @extend %align-items
+  justify-content: center
+
+.fa-search
+  color: #a4a4a4
+  +font(14px, 400, 0.35px)
+
+.header__cart__block
+  position: relative
+
+.header__cart
+  margin-right: 16px
+  padding: 10px
+
+.header__cart:hover
+  box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2)
+  border-radius: 12px
+  padding: 10px
+  transition: box-shadow 0.3s linear
+
+.header__cart__block:hover .cart__drop
+  display: flex
+
+.cart__drop
+  display: none
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  position: absolute
+  left: 0
+  top: 50px
+  width: 262px
+  padding: 19px 0 0 0
+  background-color: #fff
+  border-radius: 5px
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
+
+.cart__drop::after,
+.cart__drop::before
+  content: ''
+  position: absolute
+  background: #fff
+  left: 25px
+  top: -5px
+  width: 10px
+  height: 10px
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
+  /* Добавляем тень для уголка */
+  z-index: -1
+  transform: rotate(45deg)
+  -webkit-transform: rotate(45deg)
+
+.cart__drop::before
+  z-index: 1
+
+.cart__prod
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+
+.prod_block
+  margin-left: 14px
+
+.prod__name
+  color: $text-color
+  font-size: 12px
+  font-weight: 900
+  text-transform: uppercase
+  margin-top: 10px
+  margin-bottom: 10px
+
+.prod__price
+  color: $site-color
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+  margin-top: 12px
+
+.fa-times-circle
+  color: #c0c0c0
+  font-size: 16px
+  font-weight: 400
+  text-transform: uppercase
+  margin-top: 40px
+  margin-left: 55px
+
+.cart__hr
+  width: 90%
+  height: 1px
+  background-color: #e8e8e8
+  text-decoration: none
+  border: none
+  margin: 20px 0
+
+.cart__total
+  @extend %space-between
+  width: 228px
+  margin-bottom: 32px
+
+.cart__total__price
+  color: $text-color
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+
+.cart__button_a
+  display: inline-flex
+  height: 50px
+  width: 225px
+  justify-content: center
+  align-items: center
+  border: 1px solid #eaeaea
+  margin-bottom: 20px
+  color: #4a4a4a
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+
+.cart__button_a:hover
+  color: $site-color
+  border: 1px solid $site-color
+
+.header__cart__button
+  color: #ffffff
+  background-color: $site-color
+  +font(15px, 400, 0.38px)
+  height: 38px
+  line-height: 38px
+  padding-left: 19px
+  padding-right: 19px
+  outline: 1px solid $site-color
+  transition: color 0.5s, background-color 0.5s, outline-color 0.5s
+
+.header__cart__button:hover
+  background-color: #fff
+  color: $site-color
+
+
+
+
+
+
+
+
+
+
+
+.shopping_cart__symbol:after
+  content: "\f0d7"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+  margin-left: 235px
+
+.product__description_choose_symbol:after
+  content: "\f107"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+  margin-left: 60px
+
+
+.product__description_choose_symbol1:after
+  content: "\f107"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+  margin-left: 80px
+
+
+.symbol__aside_1:after
+  content: "\f0d7"
+  font-family: $icon-font
+  color: #6f6e6e
+  margin-left: 136px
+  transition: color 1s
+
+
+.symbol__aside_2:after
+  content: "\f0d7"
+  font-family: $icon-font
+  color: #6f6e6e
+  margin-left: 159px
+  transition: color 1s
+
+
+.symbol__aside_3:after
+  content: "\f0d7"
+  font-family: $icon-font
+  color: #6f6e6e
+  margin-left: 141px
+  transition: color 1s
+
+
+details.products__category[open] .symbol__aside_1:after
+  content: "\f0d8"
+  font-family: $icon-font
+  color: #ef5b70
+
+
+details.products__category[open] .symbol__aside_2:after
+  content: "\f0d8"
+  font-family: $icon-font
+  color: #ef5b70
+
+
+details.products__category[open] .symbol__aside_3:after
+  content: "\f0d8"
+  font-family: $icon-font
+  color: #ef5b70
 
 
 .checkout__form
@@ -203,38 +370,8 @@ details.products__category[open] .symbol__aside_3:after
   margin-top: 16px
 
 
-
-
-.form:after
-  content: "\f002"
-  font-family: FontAwesome
-  color: #a4a4a4
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-
-
-.fa-search
-  color: #a4a4a4
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-
-
-.form__button
-  margin-left: -1px
-  border-radius: 0 3px 3px 0
-  border: 1px solid #e6e6e6
-  background-color: #ffffff
-  height: 41px
-  width: 36px
-  display: flex
-  justify-content: center
-  align-items: center
-
-
 .menu__link
-  color: #222222
+  color: $text-color
   font-size: 14px
   font-weight: 700
   text-transform: uppercase
@@ -242,12 +379,9 @@ details.products__category[open] .symbol__aside_3:after
   display: block
 
 
-
-
 .menu__link:hover
-  color: #f16d7f
+  color: $site-color
   display: block
-
 
 
 .menu
@@ -264,7 +398,7 @@ details.products__category[open] .symbol__aside_3:after
 
 
 .promo__h4
-  color: #222222
+  color: $text-color
   font-size: 40px
   font-weight: 700
   text-transform: uppercase
@@ -272,7 +406,7 @@ details.products__category[open] .symbol__aside_3:after
 
 
 .promo__h3
-  color: #222222
+  color: $text-color
   font-size: 60px
   font-weight: 700
   text-transform: uppercase
@@ -281,18 +415,17 @@ details.products__category[open] .symbol__aside_3:after
 
 
 .promo__text
-  border-left: 12px solid #f16d7f
+  border-left: 12px solid $site-color
   padding-left: 12px
 
 
 .promo__span
-  color: #f16d7f
+  color: $site-color
 
 
 .promo__content
   height: 100%
-  display: flex
-  align-items: center
+  @extend %align-items
   background-image: url("../img/promo.jpg")
   background-position: 0 -52px
 
@@ -325,7 +458,6 @@ details.products__category[open] .symbol__aside_3:after
   height: 261px
 
 
-
 .offer__item
   width: 560px
 
@@ -335,25 +467,20 @@ details.products__category[open] .symbol__aside_3:after
 
 
 .offer
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   margin-top: 98px
 
 
 .offer__h4
-  color: #222222
-  font-size: 18px
-  font-weight: 900
+  color: $text-color
+  +font(18px, 900, 0.45px)
   text-transform: uppercase
-  letter-spacing: 0.45px
 
 
 .offer__h3
-  font-weight: 900
+  +font(30px, 900, 0.75px)
   text-transform: uppercase
-  color: #f16d7f
-  font-size: 30px
-  letter-spacing: 0.75px
+  color: $site-color
 
 
 .offer__item_mini2
@@ -365,10 +492,7 @@ details.products__category[open] .symbol__aside_3:after
 
 .offer__text
   background-color: #fff
-  padding-top: 16px
-  padding-bottom: 16px
-  padding-left: 19px
-  padding-right: 19px
+  padding: 16px 19px
   margin-top: 26px
 
 
@@ -378,19 +502,15 @@ details.products__category[open] .symbol__aside_3:after
 
 .fetured__header
   text-align: center
-  color: #222222
-  font-size: 30px
-  font-weight: 900
-  letter-spacing: 0.75px
+  color: $text-color
+  +font(30px, 900, 0.75px)
   line-height: 23px
 
 
 .fetured__h2
   color: #9f9f9f
-  font-size: 14px
-  font-weight: 400
+  +font(14px, 400, 0.35px)
   text-align: center
-  letter-spacing: 0.35px
   margin-top: 16px
   margin-bottom: 30px
   line-height: 12px
@@ -424,12 +544,10 @@ details.products__category[open] .symbol__aside_3:after
   align-items: center
 
 
-
 .products__fetured__item:hover .fetured__a
   display: flex
   justify-content: center
   align-items: center
-
 
 
 .products__fetured__item:hover .fetured__a_2
@@ -461,13 +579,12 @@ details.products__category[open] .symbol__aside_3:after
 
 
 .fetured__content
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   flex-wrap: wrap
 
 
 .fetured__h3
-  color: #222222
+  color: $text-color
   font-size: 13px
   font-weight: 700
   text-transform: uppercase
@@ -477,12 +594,11 @@ details.products__category[open] .symbol__aside_3:after
 
 
 .fetured__h4
-  color: #f16d7f
+  color: $site-color
   font-size: 16px
   font-weight: 700
   text-transform: uppercase
   margin-top: 15px
-
 
 
 .fetured__a
@@ -533,8 +649,6 @@ details.products__category[open] .symbol__aside_3:after
   display: none
 
 
-
-
 .fetured__a:before
   content: ""
   background-image: url(../img/cart_white.svg)
@@ -558,7 +672,6 @@ details.products__category[open] .symbol__aside_3:after
   background-size: 23px 23px
   height: 23px
   width: 23px
-
 
 
 .fetured__a:hover
@@ -605,7 +718,7 @@ details.products__category[open] .symbol__aside_3:after
 
 .button
   color: #ffffff
-  background-color: #f16d7f
+  background-color: $site-color
   font-size: 15px
   font-weight: 400
   letter-spacing: 0.38px
@@ -613,17 +726,17 @@ details.products__category[open] .symbol__aside_3:after
   line-height: 48px
   padding-left: 25px
   padding-right: 25px
-  border: 1px solid #f16d7f
+  border: 1px solid $site-color
 
 
 .button:hover
   background-color: #fff
-  color: #f16d7f
+  color: $site-color
 
 
 .symbol__arrow:after
   content: "\f178"
-  font-family: FontAwesome
+  font-family: $icon-font
   font-size: 14px
   font-weight: 400
   letter-spacing: 0.35px
@@ -631,8 +744,7 @@ details.products__category[open] .symbol__aside_3:after
 
 
 .sales
-  display: flex
-  align-items: center
+  @extend %align-items
   height: 532px
   background-color: #222224
   margin-bottom: 98px
@@ -640,7 +752,6 @@ details.products__category[open] .symbol__aside_3:after
 
 .sales__big
   position: relative
-
 
 
 .sales__layer
@@ -667,7 +778,7 @@ details.products__category[open] .symbol__aside_3:after
   font-size: 54px
   font-weight: 700
   text-transform: uppercase
-  color: #f16d7f
+  color: $site-color
 
 
 .sales__h4
@@ -680,8 +791,7 @@ details.products__category[open] .symbol__aside_3:after
 
 .sales__mini
   /*    height: 529px*/
-  display: flex
-  flex-direction: column
+  @extend %column
   justify-content: space-between
   padding-bottom: 66px
 
@@ -750,19 +860,16 @@ details.products__category[open] .symbol__aside_3:after
 
 .subscribe
   height: 438px
-  display: flex
-  align-items: center
+  @extend %align-items
   background-image: url("../img/subscribe.jpg")
-  width: 1600px
   margin: 0 auto
 
 
 .subscribe__content
-  width: 100%
   height: 100%
+  width: 100%
   background: rgba(247, 247, 247, 0.4)
-  display: flex
-  align-items: center
+  @extend %align-items
 
 
 .subscribe__left
@@ -791,7 +898,6 @@ details.products__category[open] .symbol__aside_3:after
   margin-top: 123px
 
 
-
 .subscribe__p:before
   content: url("../img/subscribe_photo.png")
   width: 83px
@@ -800,14 +906,12 @@ details.products__category[open] .symbol__aside_3:after
   margin-right: 28px
 
 
-
 .subscribe__h3
   margin-top: 19px
   margin-left: 343px
-  color: #f16d7f
+  color: $site-color
   font-size: 16px
   font-weight: 700
-
 
 
 .subscribe__h4
@@ -833,14 +937,14 @@ details.products__category[open] .symbol__aside_3:after
 
 
 a:focus .subscribe__link
-  background-color: #f16d7f
+  background-color: $site-color
   height: 4px
   width: 38px
   margin-right: 13px
 
 
 a:hover .subscribe__link
-  background-color: #f16d7f
+  background-color: $site-color
 
 
 .subscribe__h1
@@ -865,8 +969,7 @@ a:hover .subscribe__link
 
 
 .subscribe__form
-  display: flex
-  align-items: center
+  @extend %align-items
   margin-left: 92px
 
 
@@ -885,20 +988,19 @@ a:hover .subscribe__link
   padding-left: 18px
   padding-right: 20px
   margin-left: -1px
-  border: none
   border-radius: 0 23px 23px 0
-  background-color: #f16d7f
+  background-color: $site-color
   color: #ffffff
   font-size: 14px
   font-weight: 400
   letter-spacing: 0.35px
-  border: 1px solid #f16d7f
+  border: 1px solid $site-color
   transition: background-color 1s, color 1s
 
 
 .subscribe__button:hover
   background-color: #ffffff
-  color: #f16d7f
+  color: $site-color
 
 
 .footer
@@ -907,8 +1009,7 @@ a:hover .subscribe__link
 
 .footer__content
   height: 100%
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   margin-top: 109px
 
 
@@ -946,7 +1047,7 @@ a:hover .subscribe__link
 
 
 .footer__span
-  color: #f16d7f
+  color: $site-color
   font-size: 18px
   font-weight: 700
   text-transform: uppercase
@@ -961,7 +1062,7 @@ a:hover .subscribe__link
 
 
 .footer__list:hover
-  color: #f16d7f
+  color: $site-color
 
 
 .footer_li
@@ -975,8 +1076,7 @@ a:hover .subscribe__link
 
 .cpoyright
   height: 100%
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   align-items: center
 
 
@@ -993,18 +1093,12 @@ a:hover .subscribe__link
   width: 32px
 
 
-
-.copyright__link:hover social2:after
-  color: #f7f7f8
-
-
 .copyright__social
   display: flex
 
 
 .copyright__social a
   margin-right: 8px
-
 
 
 .social1
@@ -1016,12 +1110,12 @@ a:hover .subscribe__link
 
 
 .social1:hover
-  background-color: #f16d7f
+  background-color: $site-color
 
 
 .social1:after
   content: "\f09a"
-  font-family: FontAwesome
+  font-family: $icon-font
   color: #b2b2b2
   transition: color 1s
 
@@ -1039,12 +1133,12 @@ a:hover .subscribe__link
 
 
 .social2:hover
-  background-color: #f16d7f
+  background-color: $site-color
 
 
 .social2:after
   content: "\f099"
-  font-family: FontAwesome
+  font-family: $icon-font
   color: #b2b2b2
   transition: color 1s
 
@@ -1062,12 +1156,12 @@ a:hover .subscribe__link
 
 
 .social3:hover
-  background-color: #f16d7f
+  background-color: $site-color
 
 
 .social3:after
   content: "\f0e1"
-  font-family: FontAwesome
+  font-family: $icon-font
   color: #b2b2b2
   transition: color 1s
 
@@ -1085,12 +1179,12 @@ a:hover .subscribe__link
 
 
 .social4:hover
-  background-color: #f16d7f
+  background-color: $site-color
 
 
 .social4:after
   content: "\f231"
-  font-family: FontAwesome
+  font-family: $icon-font
   color: #b2b2b2
   transition: color 1s
 
@@ -1108,12 +1202,12 @@ a:hover .subscribe__link
 
 
 .social5:hover
-  background-color: #f16d7f
+  background-color: $site-color
 
 
 .social5:after
   content: "\f0d5"
-  font-family: FontAwesome
+  font-family: $icon-font
   color: #b2b2b2
   transition: color 1s
 
@@ -1127,214 +1221,20 @@ a:hover .subscribe__link
 
 
 .futured__a
-  color: #222222
+  color: $text-color
   font-size: 13px
   font-weight: 400
   text-transform: uppercase
 
 
 .futured__a:hover
-  color: #f16d7f
+  color: $site-color
 
 
-.drop__name
-  color: #232323
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-  letter-spacing: 0.35px
-
-
-.drop__menu
-  list-style-type: none
-  padding-left: 5px
-  margin-bottom: 19px
-
-
-.form__drop
-  display: flex
-  justify-content: flex-start
-  align-items: flex-start
-  flex-direction: column
-  position: absolute
-  left: 0px
-  top: 40px
-  width: 262px
-  padding: 19px 0 0 15px
-  background-color: #fff
-  border-radius: 5px
-  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
-  z-index: 1
-
-
-.form__drop::after,
-.form__drop::before
-  content: ''
-  position: absolute
-  background: #fff
-  left: 69px
-  top: -5px
-  width: 10px
-  height: 10px
-  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
-  /* Добавляем тень для уголка */
-  z-index: -1
-  transform: rotate(45deg)
-  -webkit-transform: rotate(45deg)
-
-
-.form__drop::before
-  z-index: 1
-
-
-.drop__a
-  color: #4f4f4f
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-
-
-.drop__a:hover
-  color: #f16d7f
-
-
-.drop__hr
-  width: 90%
-  height: 2px
-  background-color: #e8e8e8
-  text-decoration: none
-  border: none
-
-
-.header__cart__block
-  position: relative
-
-
-.header__cart__block:hover .cart__drop
-  display: flex
-
-
-.cart__drop
-  display: none
-  justify-content: center
-  align-items: center
-  flex-direction: column
-  position: absolute
-  left: 0px
-  top: 50px
-  width: 262px
-  padding: 19px 0 0 0
-  background-color: #fff
-  border-radius: 5px
-  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
-
-
-.cart__drop::after,
-.cart__drop::before
-  content: ''
-  position: absolute
-  background: #fff
-  left: 25px
-  top: -5px
-  width: 10px
-  height: 10px
-  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
-  /* Добавляем тень для уголка */
-  z-index: -1
-  transform: rotate(45deg)
-  -webkit-transform: rotate(45deg)
-
-
-.cart__drop::before
-  z-index: 1
-
-
-
-.cart__prod
-  display: flex
-  justify-content: flex-start
-  align-items: flex-start
-
-
-.cart__hr
-  width: 90%
-  height: 1px
-  background-color: #e8e8e8
-  text-decoration: none
-  border: none
-  margin: 20px 0
-
-
-.prod_block
-  margin-left: 14px
-
-
-
-
-.prod__name
-  color: #222222
-  font-size: 12px
-  font-weight: 900
-  text-transform: uppercase
-  margin-top: 10px
-  margin-bottom: 10px
-
-
-.fa-times-circle
-  color: #c0c0c0
-  font-size: 16px
-  font-weight: 400
-  text-transform: uppercase
-  margin-top: 40px
-  margin-left: 55px
-
-
-.prod__price
-  color: #f16d7f
-  font-size: 12px
-  font-weight: 400
-  text-transform: uppercase
-
-  font-size: 10px
-  margin-top: 12px
-
-
-.cart__total
-  display: flex
-  justify-content: space-between
-  width: 228px
-  margin-bottom: 32px
-
-
-.cart__total__price
-  color: #222222
-  font-size: 16px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.cart__button
-  display: inline-flex
-  justify-content: center
-  align-items: center
-  height: 50px
-  width: 225px
-  border: 1px solid #eaeaea
-  margin-bottom: 20px
-  color: #4a4a4a
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.cart__button:hover
-  color: #f16d7f
-  border: 1px solid #f16d7f
 
 
 .sales__mini_cat
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   align-items: center
   height: 341px
 
@@ -1345,8 +1245,7 @@ a:hover .subscribe__link
 
 
 .sales__container_cat
-  display: flex
-  flex-direction: column
+  @extend %column
   align-items: center
   width: 329px
   justify-content: center
@@ -1421,7 +1320,7 @@ a:hover .subscribe__link
 
 
 .mega__link:hover
-  color: #f16d7f
+  color: $site-color
 
 
 .mega__ul
@@ -1437,7 +1336,6 @@ a:hover .subscribe__link
   text-transform: uppercase
   margin-top: 8px
   letter-spacing: 0.35px
-  margin-top: 20px
 
 
 .menu__mega__drop
@@ -1446,7 +1344,7 @@ a:hover .subscribe__link
 
 
 .menu__mega__drop:last-of-type
-  margin-right: 0px
+  margin-right: 0
 
 
 .drop__flex
@@ -1467,14 +1365,13 @@ a:hover .subscribe__link
 
 
 .breadcrumb__content
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   align-items: center
   height: 148px
 
 
 .breadcrumb__h1
-  color: #f16d7f
+  color: $site-color
   font-size: 24px
   font-weight: 600
   text-transform: uppercase
@@ -1491,19 +1388,15 @@ a:hover .subscribe__link
   list-style-type: none
 
 
-
-
 .breadcrumb__a
   text-decoration: none
   color: #000
 
 .breadcrumb__a:hover
-  color: #f16d7f
+  color: $site-color
   font-size: 14px
   font-weight: 700
   text-transform: uppercase
-
-
 
 
 .breadcrumb__item::after
@@ -1516,15 +1409,14 @@ a:hover .subscribe__link
 
 
 .breadcrumb__item:last-of-type
-  color: #f16d7f
+  color: $site-color
   font-size: 14px
   font-weight: 700
   text-transform: uppercase
 
 
 .products_content
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   margin-top: 60px
 
 
@@ -1557,7 +1449,6 @@ details.products__category[open] .products__category_style
   font-size: 14px
   font-weight: 700
   text-transform: uppercase
-
 
 
 .products__category
@@ -1614,11 +1505,6 @@ details.products__category[open] .products__category_style
   background-color: red
 
 
-
-
-
-
-
 .products__summary::-webkit-details-marker
   display: none
 
@@ -1655,8 +1541,7 @@ details.products__category[open] .products__category_style
 
 
 .products__filter__top
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   margin-bottom: 41px
 
 
@@ -1694,8 +1579,6 @@ details.products__category[open] .products__category_style
   color: #dfdfdf
 
 
-
-
 .trending__conteiner_input
   display: flex
   flex-wrap: wrap
@@ -1716,17 +1599,12 @@ details.products__category[open] .products__category_style
   margin-top: 10px
 
 
-
-
 .products__items
   width: 846px
 
 
-
-
 .filter__price_flex
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   margin-top: 10px
 
 
@@ -1744,8 +1622,7 @@ details.products__category[open] .products__category_style
 .products__filter__bottom
   background-color: #f3f3f3
   height: 50px
-  display: flex
-  align-items: center
+  @extend %align-items
   justify-content: flex-start
 
 
@@ -1799,14 +1676,12 @@ details.products__category[open] .products__category_style
 
 .products__drop
   width: 82px
-  display: flex
-  flex-direction: column
+  @extend %column
 
 
 .products__drop_2
   width: 53px
-  display: flex
-  flex-direction: column
+  @extend %column
 
 
 .products__drop__item1
@@ -1883,8 +1758,7 @@ details.products__category[open] .products__category_style
 
 
 .products__view
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   margin-bottom: 110px
 
 
@@ -1957,22 +1831,20 @@ details.products__category[open] .products__category_style
   color: #ef5b70
 
 
-
-
 .checkout
   margin-top: 89px
   margin-bottom: 93px
 
 
 .checkout__h1
-  color: #222222
+  color: $text-color
   font-size: 16px
   font-weight: 700
   text-transform: uppercase
 
 
 .checkout__summary
-  color: #222222
+  color: $text-color
   font-size: 16px
   font-weight: 700
   text-transform: uppercase
@@ -1993,7 +1865,7 @@ details.products__category[open] .products__category_style
 
 
 .checkout__details_h1
-  color: #222222
+  color: $text-color
   font-size: 13px
   font-weight: 700
   text-transform: uppercase
@@ -2007,7 +1879,7 @@ details.products__category[open] .products__category_style
 
 
 .checkout__radio
-  color: #222222
+  color: $text-color
   font-size: 12px
   font-weight: 700
   text-transform: uppercase
@@ -2015,7 +1887,7 @@ details.products__category[open] .products__category_style
 
 
 .checkout__radio_2
-  color: #222222
+  color: $text-color
   font-size: 12px
   font-weight: 700
   text-transform: uppercase
@@ -2029,7 +1901,7 @@ details.products__category[open] .products__category_style
 
 
 .checkout__radio_1
-  color: #222222
+  color: $text-color
   font-size: 12px
   font-weight: 700
   text-transform: uppercase
@@ -2038,7 +1910,7 @@ details.products__category[open] .products__category_style
 
 
 .checkout__reg
-  color: #222222
+  color: $text-color
   font-size: 13px
   font-weight: 400
   text-transform: uppercase
@@ -2054,7 +1926,7 @@ details.products__category[open] .products__category_style
 
 .checkout__details_p1::before
   content: "\f101"
-  font-family: FontAwesome
+  font-family: $icon-font
   font-size: 14px
   font-weight: 400
   letter-spacing: 0.35px
@@ -2129,9 +2001,8 @@ details.products__category[open] .products__category_style
 
 
 .shopping_cart__a:hover
-  color: #f16d7f
-  border: 1px solid #f16d7f
-
+  color: $site-color
+  border: 1px solid $site-color
 
 
 .checkout__log_a:hover
@@ -2141,7 +2012,7 @@ details.products__category[open] .products__category_style
 
 .checkout__log_a_2
   display: block
-  color: #222222
+  color: $text-color
   font-size: 14px
   font-weight: 400
   margin-top: 56px
@@ -2164,26 +2035,21 @@ details.products__category[open] .products__category_style
 
 
 .shopping_cart__h
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   margin-bottom: 20px
 
 
 .shopping_cart__item
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   border-top: 1px solid #eaeaea
   padding: 25px 0
 
 
 .shopping_cart__item_l
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   border-top: 1px solid #eaeaea
   border-bottom: 1px solid #eaeaea
   padding: 25px 0
-
-
 
 
 .shopping_cart_box1
@@ -2217,7 +2083,7 @@ details.products__category[open] .products__category_style
 
 
 .shopping_cart__h1
-  color: #222222
+  color: $text-color
   font-size: 13px
   font-weight: 700
   text-transform: uppercase
@@ -2230,7 +2096,7 @@ details.products__category[open] .products__category_style
 
 
 .shopping_cart_box1_p
-  color: #222222
+  color: $text-color
   font-size: 13px
   font-weight: 700
   text-transform: uppercase
@@ -2294,17 +2160,15 @@ details.products__category[open] .products__category_style
 
 .shopping_cart_box6_i::after
   content: "\f057"
-  font-family: FontAwesome
+  font-family: $icon-font
   color: #c0c0c0
   font-size: 16px
   font-weight: 400
   text-transform: uppercase
 
 
-
 .shopping_cart__botton
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   margin-bottom: 63px
 
 
@@ -2317,8 +2181,7 @@ details.products__category[open] .products__category_style
 
 
 .shopping_cart__proceed_box3
-  display: flex
-  flex-direction: column
+  @extend %column
   width: 25%
   height: 174px
   padding: 41px 41px 0 41px
@@ -2327,12 +2190,11 @@ details.products__category[open] .products__category_style
 
 
 .shopping_cart__proceed
-  display: flex
-  justify-content: space-between
+  @extend %space-between
 
 
 .shopping_cart_h1
-  color: #222222
+  color: $text-color
   font-size: 16px
   font-weight: 700
   text-transform: uppercase
@@ -2368,7 +2230,7 @@ details.products__category[open] .products__category_style
 
 .shopping_cart__proceed_box3_a
   display: inline-block
-  background-color: #f16d7f
+  background-color: $site-color
   height: 50px
   padding: 0 46px
   line-height: 50px
@@ -2382,15 +2244,13 @@ details.products__category[open] .products__category_style
 
 .shopping_cart__proceed_box3_a:hover
   background-color: #fff
-  border: 1px solid #f16d7f
-  color: #f16d7f
+  border: 1px solid $site-color
+  color: $site-color
 
 
 .shopping_cart__proceed_a:hover
-  border: 1px solid #f16d7f
-  color: #f16d7f
-
-
+  border: 1px solid $site-color
+  color: $site-color
 
 
 .shopping_cart__proceed_a_p
@@ -2415,7 +2275,7 @@ details.products__category[open] .products__category_style
 
 
 .shopping_cart__proceed_box3_p2
-  color: #222222
+  color: $text-color
   font-size: 16px
   font-weight: 700
   text-transform: uppercase
@@ -2423,26 +2283,22 @@ details.products__category[open] .products__category_style
 
 
 .shopping_cart__proceed_box3_p2 span
-  color: #f16d7f
+  color: $site-color
 
 
 .shopping_cart__proceed_box3_hr
   background-color: #e2e2e2
   width: 100%
   height: 1px
-  background-color: #e8e8e8
   text-decoration: none
   border: none
   margin: 20px 0
 
 
 .slider
-  background: url(../img/slider1.jpg) no-repeat
-  background-position: center
-  background-color: #f7f7f7
+  background: url(../img/slider1.jpg) no-repeat center
   height: 777px
-  display: flex
-  justify-content: space-between
+  @extend %space-between
   align-items: center
   position: relative
   z-index: -11
@@ -2458,11 +2314,10 @@ details.products__category[open] .products__category_style
 
 .arrow_left::after
   content: "\f104"
-  font-family: FontAwesome
+  font-family: $icon-font
   color: #ffffff
   font-size: 24px
   font-weight: 400
-
 
 
 .arrow_right
@@ -2475,17 +2330,15 @@ details.products__category[open] .products__category_style
 
 .arrow_right::after
   content: "\f105"
-  font-family: FontAwesome
+  font-family: $icon-font
   color: #ffffff
   font-size: 24px
   font-weight: 400
 
 
-
-.product__description 
+.product__description
   border: 1px solid #eaeaea
-  display: flex
-  flex-direction: column
+  @extend %column
   align-items: center
   position: relative
   top: -86px
@@ -2494,9 +2347,9 @@ details.products__category[open] .products__category_style
   margin-bottom: 30px
 
 
-.product__description_h3 
+.product__description_h3
   display: inline-block
-  color: #f16d7f
+  color: $site-color
   font-size: 14px
   font-weight: 700
   text-transform: uppercase
@@ -2508,8 +2361,8 @@ details.products__category[open] .products__category_style
   z-index: 1
 
 
-.product__description_h3::before 
-  border-bottom: 3px solid #f16d7f
+.product__description_h3::before
+  border-bottom: 3px solid $site-color
   content: ""
   position: absolute
   top: 0
@@ -2520,7 +2373,7 @@ details.products__category[open] .products__category_style
   z-index: 10
 
 
-.product__description_h1 
+.product__description_h1
   color: #4d4d4d
   font-size: 18px
   font-weight: 700
@@ -2529,7 +2382,7 @@ details.products__category[open] .products__category_style
   margin-bottom: 67px
 
 
-.product__description_text 
+.product__description_text
   width: 620px
   text-align: center
   color: #5e5e5e
@@ -2539,7 +2392,7 @@ details.products__category[open] .products__category_style
   margin-bottom: 28px
 
 
-.product__description_box_p 
+.product__description_box_p
   color: #b9b9b9
   font-size: 14px
   font-weight: 700
@@ -2547,29 +2400,27 @@ details.products__category[open] .products__category_style
   margin-right: 44px
 
 
-.product__description_box_p:last-of-type 
-  margin-right: 0px
+.product__description_box_p:last-of-type
+  margin-right: 0
 
 
-
-.product__description_box_p span 
+.product__description_box_p span
   color: #2f2f2f
 
 
-
-.product__description_box 
+.product__description_box
   display: flex
   margin-bottom: 37px
 
 
-.product__description_price 
+.product__description_price
   color: #ef5b70
   font-size: 24px
   font-weight: 700
   margin-bottom: 43px
 
 
-.product__description_hr 
+.product__description_hr
   width: 642px
   height: 1px
   background-color: #eaeaea
@@ -2578,17 +2429,16 @@ details.products__category[open] .products__category_style
   margin-bottom: 64px
 
 
-.product__description_choose 
+.product__description_choose
   width: 542px
-  display: flex
-  justify-content: space-between
+  @extend %space-between
 
 
-.product__description_choose_b 
+.product__description_choose_b
   width: 25%
 
 
-.product__description_choose_p 
+.product__description_choose_p
   color: #2f2f2f
   font-size: 14px
   font-weight: 700
@@ -2596,14 +2446,14 @@ details.products__category[open] .products__category_style
   margin-bottom: 16px
 
 
-.products__drop_3 
+.products__drop_3
   position: absolute
   z-index: 20
   background: #fff
   width: 134px
 
 
-.product__description_button 
+.product__description_button
   margin-top: 28px
   margin-bottom: 122px
   height: 55px
@@ -2617,16 +2467,16 @@ details.products__category[open] .products__category_style
   position: relative
 
 
-.product__description_button img 
+.product__description_button img
   margin-right: 15px
 
 
-.product__description_button:hover 
+.product__description_button:hover
   background-color: #ef5b70
   color: #fff
 
 
-.product__description_button:hover::before 
+.product__description_button:hover::before
   content: ""
   position: absolute
   background-image: url(../img/cart_white.svg)
@@ -2637,11 +2487,11 @@ details.products__category[open] .products__category_style
   left: 209px
 
 
-.you_may_like 
+.you_may_like
   margin-bottom: 73px
 
 
-.you_may_like_h1 
+.you_may_like_h1
   color: #4d4d4d
   font-size: 24px
   font-weight: 700
@@ -2650,26 +2500,7 @@ details.products__category[open] .products__category_style
   text-align: center
 
 
-.you_may_like_cont 
-  display: flex
-  justify-content: space-between
+.you_may_like_cont
+  @extend %space-between
 
-
-.cart__button_a 
-  display: inline-flex
-  height: 50px
-  width: 225px
-  justify-content: center
-  align-items: center
-  border: 1px solid #eaeaea
-  margin-bottom: 20px
-  color: #4a4a4a
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.cart__button_a:hover 
-  color: #f16d7f
-  border: 1px solid #f16d7f
 
