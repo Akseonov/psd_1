@@ -403,90 +403,15 @@ a
 .promo__span
   color: $site-color
 
+.offer
+  @extend %space-between
+  margin-top: 98px
 
+.offer__item
+  width: 560px
 
-
-
-
-
-.shopping_cart__symbol:after
-  content: "\f0d7"
-  font-family: $icon-font
-  +font(14px, 400, 0.35px)
-  margin-left: 235px
-
-.product__description_choose_symbol:after
-  content: "\f107"
-  font-family: $icon-font
-  +font(14px, 400, 0.35px)
-  margin-left: 60px
-
-
-.product__description_choose_symbol1:after
-  content: "\f107"
-  font-family: $icon-font
-  +font(14px, 400, 0.35px)
-  margin-left: 80px
-
-
-.symbol__aside_1:after
-  content: "\f0d7"
-  font-family: $icon-font
-  color: #6f6e6e
-  margin-left: 136px
-  transition: color 1s
-
-
-.symbol__aside_2:after
-  content: "\f0d7"
-  font-family: $icon-font
-  color: #6f6e6e
-  margin-left: 159px
-  transition: color 1s
-
-
-.symbol__aside_3:after
-  content: "\f0d7"
-  font-family: $icon-font
-  color: #6f6e6e
-  margin-left: 141px
-  transition: color 1s
-
-
-details.products__category[open] .symbol__aside_1:after
-  content: "\f0d8"
-  font-family: $icon-font
-  color: #ef5b70
-
-
-details.products__category[open] .symbol__aside_2:after
-  content: "\f0d8"
-  font-family: $icon-font
-  color: #ef5b70
-
-
-details.products__category[open] .symbol__aside_3:after
-  content: "\f0d8"
-  font-family: $icon-font
-  color: #ef5b70
-
-
-.checkout__form
-  border-radius: 0 3px 3px 0
-  border: 1px solid #e6e6e6
-  background-color: #ffffff
-  height: 39px
-  width: 252px
-  margin-left: -1px
-  padding: 0 15px
-  margin-top: 16px
-
-
-
-
-
-
-
+.offer__item:first-of-type
+  margin-bottom: 20px
 
 .offer__item_big1
   height: 542px
@@ -494,13 +419,26 @@ details.products__category[open] .symbol__aside_3:after
   display: flex
   align-items: flex-start
 
-
 .offer__item_big2
   height: 542px
   background-image: url("../img/offer_big_2.jpg")
   display: flex
   align-items: flex-start
 
+.offer__text
+  background-color: #fff
+  padding: 16px 19px
+  margin-top: 26px
+
+.offer__h4
+  color: $text-color
+  +font(18px, 900, 0.45px)
+  text-transform: uppercase
+
+.offer__h3
+  +font(30px, 900, 0.75px)
+  text-transform: uppercase
+  color: $site-color
 
 .offer__item_mini1
   height: 261px
@@ -511,35 +449,8 @@ details.products__category[open] .symbol__aside_3:after
   display: flex
   align-items: flex-start
 
-
 .offer__item_mini1
   height: 261px
-
-
-.offer__item
-  width: 560px
-
-
-.offer__item:first-of-type
-  margin-bottom: 20px
-
-
-.offer
-  @extend %space-between
-  margin-top: 98px
-
-
-.offer__h4
-  color: $text-color
-  +font(18px, 900, 0.45px)
-  text-transform: uppercase
-
-
-.offer__h3
-  +font(30px, 900, 0.75px)
-  text-transform: uppercase
-  color: $site-color
-
 
 .offer__item_mini2
   height: 261px
@@ -547,23 +458,14 @@ details.products__category[open] .symbol__aside_3:after
   display: flex
   align-items: flex-start
 
-
-.offer__text
-  background-color: #fff
-  padding: 16px 19px
-  margin-top: 26px
-
-
 .fetured
   margin-top: 100px
-
 
 .fetured__header
   text-align: center
   color: $text-color
   +font(30px, 900, 0.75px)
   line-height: 23px
-
 
 .fetured__h2
   color: #9f9f9f
@@ -573,91 +475,25 @@ details.products__category[open] .symbol__aside_3:after
   margin-bottom: 30px
   line-height: 12px
 
-
-.products__fetured__item
-  margin-bottom: 40px
-  width: 263px
-  position: relative
-
+.fetured__content
+  @extend %space-between
+  flex-wrap: wrap
 
 .fetured__item
   margin-top: 40px
   width: 263px
   position: relative
+  img
+    width: 263px
+    height: 281px
 
-
-.fetured__item img
-  width: 263px
-  height: 281px
-
-
-.products__fetured__item img
-  width: 263px
-  height: 280px
-
+.fetured__item:hover
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
 
 .fetured__item:hover .fetured__a
   display: flex
   justify-content: center
   align-items: center
-
-
-.products__fetured__item:hover .fetured__a
-  display: flex
-  justify-content: center
-  align-items: center
-
-
-.products__fetured__item:hover .fetured__a_2
-  display: flex
-  justify-content: center
-  align-items: center
-
-
-.products__fetured__item:hover .fetured__a_3
-  display: flex
-  justify-content: center
-  align-items: center
-
-
-.fetured__item:hover
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
-
-
-.products__fetured__item:hover
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
-
-
-.fetured__item:hover img
-  filter: brightness(50%)
-
-
-.products__fetured__item:hover img
-  filter: brightness(50%)
-
-
-.fetured__content
-  @extend %space-between
-  flex-wrap: wrap
-
-
-.fetured__h3
-  color: $text-color
-  font-size: 13px
-  font-weight: 700
-  text-transform: uppercase
-  margin-left: 14px
-  margin-top: 15px
-  letter-spacing: 0.4px
-
-
-.fetured__h4
-  color: $site-color
-  font-size: 16px
-  font-weight: 700
-  text-transform: uppercase
-  margin-top: 15px
-
 
 .fetured__a
   width: 123px
@@ -761,17 +597,187 @@ details.products__category[open] .symbol__aside_3:after
 .fetured__a_3:hover:before
   background-image: url(../img/resive_white.svg)
 
-
-.fetured__cart
-  margin-right: 5px
-  width: 20px
-
+.fetured__h4
+  color: $site-color
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  margin-top: 15px
 
 .fetured__button
   display: flex
   justify-content: center
   margin-top: 60px
   margin-bottom: 115px
+
+
+
+
+
+
+
+
+
+
+
+
+
+.products__fetured__item
+  margin-bottom: 40px
+  width: 263px
+  position: relative
+
+
+
+
+
+.products__fetured__item img
+  width: 263px
+  height: 280px
+
+
+
+
+.products__fetured__item:hover .fetured__a
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+.products__fetured__item:hover .fetured__a_2
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+.products__fetured__item:hover .fetured__a_3
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+
+
+
+.products__fetured__item:hover
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+
+
+.fetured__item:hover img
+  filter: brightness(50%)
+
+
+.products__fetured__item:hover img
+  filter: brightness(50%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shopping_cart__symbol:after
+  content: "\f0d7"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+  margin-left: 235px
+
+.product__description_choose_symbol:after
+  content: "\f107"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+  margin-left: 60px
+
+
+.product__description_choose_symbol1:after
+  content: "\f107"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+  margin-left: 80px
+
+
+.symbol__aside_1:after
+  content: "\f0d7"
+  font-family: $icon-font
+  color: #6f6e6e
+  margin-left: 136px
+  transition: color 1s
+
+
+.symbol__aside_2:after
+  content: "\f0d7"
+  font-family: $icon-font
+  color: #6f6e6e
+  margin-left: 159px
+  transition: color 1s
+
+
+.symbol__aside_3:after
+  content: "\f0d7"
+  font-family: $icon-font
+  color: #6f6e6e
+  margin-left: 141px
+  transition: color 1s
+
+
+details.products__category[open] .symbol__aside_1:after
+  content: "\f0d8"
+  font-family: $icon-font
+  color: #ef5b70
+
+
+details.products__category[open] .symbol__aside_2:after
+  content: "\f0d8"
+  font-family: $icon-font
+  color: #ef5b70
+
+
+details.products__category[open] .symbol__aside_3:after
+  content: "\f0d8"
+  font-family: $icon-font
+  color: #ef5b70
+
+
+.checkout__form
+  border-radius: 0 3px 3px 0
+  border: 1px solid #e6e6e6
+  background-color: #ffffff
+  height: 39px
+  width: 252px
+  margin-left: -1px
+  padding: 0 15px
+  margin-top: 16px
+
+
 
 
 .button
