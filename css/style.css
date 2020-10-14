@@ -395,6 +395,37 @@ a {
 .mega__link:hover {
   color: #f16d7f; }
 
+.promo {
+  height: 613px;
+  background-color: #e8e8e8; }
+
+.promo__content {
+  height: 100%;
+  background-image: url("../img/promo.jpg");
+  background-position: 0 -52px; }
+
+.promo__text {
+  border-left: 12px solid #f16d7f;
+  padding-left: 12px; }
+
+.promo__h3 {
+  color: #222222;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 43px;
+  margin-bottom: 15px; }
+
+.promo__h4 {
+  color: #222222;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 33px; }
+
+.promo__span {
+  color: #f16d7f; }
+
 .shopping_cart__symbol:after {
   content: "";
   font-family: FontAwesome;
@@ -464,37 +495,6 @@ details.products__category[open] .symbol__aside_3:after {
   margin-left: -1px;
   padding: 0 15px;
   margin-top: 16px; }
-
-.promo {
-  height: 613px;
-  background-color: #e8e8e8; }
-
-.promo__h4 {
-  color: #222222;
-  font-size: 40px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 33px; }
-
-.promo__h3 {
-  color: #222222;
-  font-size: 60px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 43px;
-  margin-bottom: 15px; }
-
-.promo__text {
-  border-left: 12px solid #f16d7f;
-  padding-left: 12px; }
-
-.promo__span {
-  color: #f16d7f; }
-
-.promo__content {
-  height: 100%;
-  background-image: url("../img/promo.jpg");
-  background-position: 0 -52px; }
 
 .offer__item_big1 {
   height: 542px;
