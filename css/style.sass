@@ -287,9 +287,89 @@ a
   background-color: #fff
   color: $site-color
 
+.menu
+  @extend %align-items
+  justify-content: center
+  list-style-type: none
+  height: 51px
 
+.menu__list
+  position: relative
 
+.menu__list:hover .drop__flex
+  display: flex
 
+.menu__link
+  color: $text-color
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  padding: 20px
+  display: block
+
+.menu__link:hover
+  color: $site-color
+  display: block
+
+.menu__mega
+  border-radius: 5px
+  background-color: #fff
+  padding: 12px 20px 20px
+  border: 1px solid #ececec
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
+  position: absolute
+  top: 43px
+
+.menu__mega::after,
+.menu__mega::before
+  content: ''
+  position: absolute
+  background: #fff
+  left: 10px
+  top: -5px
+  width: 10px
+  height: 10px
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
+  /* Добавляем тень для уголка */
+  z-index: -1
+  transform: rotate(45deg)
+  -webkit-transform: rotate(45deg)
+
+.menu__mega::before
+  z-index: 1
+
+.drop__flex
+  display: none
+  margin-right: 46px
+
+.menu__mega__drop
+  width: 235px
+  margin-right: 46px
+
+.menu__mega__drop:last-of-type
+  margin-right: 0
+
+.mega__h3
+  padding-bottom: 8px
+  color: #232323
+  +font(14px, 900, 0.35px)
+  text-transform: uppercase
+  margin-top: 8px
+
+.mega__ul
+  list-style-type: none
+  margin-top: 16px
+
+.mega__link
+  text-decoration: none
+  color: #646464
+  font-size: 14px
+  font-weight: 500
+  letter-spacing: 0.35px
+  line-height: 33px
+
+.mega__link:hover
+  color: $site-color
 
 
 
@@ -370,26 +450,7 @@ details.products__category[open] .symbol__aside_3:after
   margin-top: 16px
 
 
-.menu__link
-  color: $text-color
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-  padding: 20px
-  display: block
 
-
-.menu__link:hover
-  color: $site-color
-  display: block
-
-
-.menu
-  display: flex
-  list-style-type: none
-  height: 51px
-  justify-content: center
-  align-items: center
 
 
 .promo
@@ -1280,84 +1341,16 @@ a:hover .subscribe__link
   margin-bottom: 29px
 
 
-.menu__mega
-  border-radius: 5px
-  background-color: #fff
-  padding: 12px 20px 20px
-  border: 1px solid #ececec
-  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
-  position: absolute
-  top: 43px
 
 
-.menu__mega::after,
-.menu__mega::before
-  content: ''
-  position: absolute
-  background: #fff
-  left: 10px
-  top: -5px
-  width: 10px
-  height: 10px
-  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2)
-  /* Добавляем тень для уголка */
-  z-index: -1
-  transform: rotate(45deg)
-  -webkit-transform: rotate(45deg)
 
 
-.menu__mega::before
-  z-index: 1
 
 
-.mega__link
-  text-decoration: none
-  color: #646464
-  font-size: 14px
-  font-weight: 500
-  letter-spacing: 0.35px
-  line-height: 33px
 
 
-.mega__link:hover
-  color: $site-color
 
 
-.mega__ul
-  list-style-type: none
-  margin-top: 16px
-
-
-.mega__h3
-  padding-bottom: 8px
-  color: #232323
-  font-size: 14px
-  font-weight: 900
-  text-transform: uppercase
-  margin-top: 8px
-  letter-spacing: 0.35px
-
-
-.menu__mega__drop
-  width: 235px
-  margin-right: 46px
-
-
-.menu__mega__drop:last-of-type
-  margin-right: 0
-
-
-.drop__flex
-  display: none
-  margin-right: 46px
-
-
-.menu__list
-  position: relative
-
-
-.menu__list:hover .drop__flex
-  display: flex
 
 
 .breadcrumb__container
