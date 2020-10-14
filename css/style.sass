@@ -495,6 +495,18 @@ a
   justify-content: center
   align-items: center
 
+.futured__info
+  padding: 20px 15px
+
+.futured__a
+  color: $text-color
+  font-size: 13px
+  font-weight: 400
+  text-transform: uppercase
+
+.futured__a:hover
+  color: $site-color
+
 .fetured__a
   width: 123px
   height: 39px
@@ -509,7 +521,6 @@ a
   top: 98px
   left: 70px
   display: none
-
 
 .fetured__a_2
   width: 57px
@@ -526,7 +537,6 @@ a
   left: 70px
   display: none
 
-
 .fetured__a_3
   width: 57px
   height: 39px
@@ -542,7 +552,6 @@ a
   left: 136px
   display: none
 
-
 .fetured__a:before
   content: ""
   background-image: url(../img/cart_white.svg)
@@ -551,14 +560,12 @@ a
   width: 23px
   margin-right: 10px
 
-
 .fetured__a_2:before
   content: ""
   background-image: url(../img/star_white.svg)
   background-size: 23px 23px
   height: 23px
   width: 23px
-
 
 .fetured__a_3:before
   content: ""
@@ -567,32 +574,26 @@ a
   height: 23px
   width: 23px
 
-
 .fetured__a:hover
   color: black
   background-color: rgba(255, 255, 255, 0.7)
   border: 1px solid #000
-
 
 .fetured__a_2:hover
   color: black
   background-color: rgba(255, 255, 255, 0.7)
   border: 1px solid #000
 
-
 .fetured__a_3:hover
   color: black
   background-color: rgba(255, 255, 255, 0.7)
   border: 1px solid #000
 
-
 .fetured__a:hover:before
   background-image: url(../img/cart.svg)
 
-
 .fetured__a_2:hover:before
   background-image: url(../img/star_white.svg)
-
 
 .fetured__a_3:hover:before
   background-image: url(../img/resive_white.svg)
@@ -698,6 +699,320 @@ a
   margin-left: 111px
   margin-right: 43px
   line-height: 1.7
+
+.subscribe
+  height: 438px
+  @extend %align-items
+  background-image: url("../img/subscribe.jpg")
+  margin: 0 auto
+
+.subscribe__content
+  height: 100%
+  width: 100%
+  background: rgba(247, 247, 247, 0.4)
+  @extend %align-items
+
+.subscribe__left
+  width: 50%
+  height: 100%
+  border-right: 0.5px solid #fff
+  align-items: center
+
+.subscribe__right
+  width: 50%
+  height: 100%
+  border-left: 0.5px solid #fff
+
+.subscribe__p
+  color: #222224
+  font-size: 16px
+  font-style: italic
+  letter-spacing: 0.4px
+  display: flex
+  width: 500px
+  line-height: 1.7
+  margin-left: 230px
+  margin-top: 123px
+
+.subscribe__p:before
+  content: url("../img/subscribe_photo.png")
+  width: 83px
+  height: 83px
+  margin-top: -6px
+  margin-right: 28px
+
+.subscribe__h3
+  margin-top: 19px
+  margin-left: 343px
+  color: $site-color
+  font-size: 16px
+  font-weight: 700
+
+.subscribe__h4
+  margin-left: 343px
+  +font(12px, 700, 0.3px)
+  color: #222224
+
+.subscribe__ul
+  display: flex
+  list-style-type: none
+  margin-top: 41px
+  margin-left: 344px
+
+.subscribe__link
+  background-color: #d6d6d6
+  height: 4px
+  width: 38px
+  margin-right: 13px
+
+a:focus .subscribe__link
+  background-color: $site-color
+  height: 4px
+  width: 38px
+  margin-right: 13px
+
+a:hover .subscribe__link
+  background-color: $site-color
+
+.subscribe__h1
+  color: #222224
+  +font(24px, 400, 0.6px)
+  text-transform: uppercase
+  margin-bottom: 5px
+  margin-top: 148px
+  margin-left: 219px
+
+.subscribe__h2
+  color: #222224
+  +font(14px, 400, 0.35px)
+  text-transform: uppercase
+  margin-left: 146px
+  margin-bottom: 35px
+
+.subscribe__form
+  @extend %align-items
+  margin-left: 92px
+
+.subscribe__input
+  border-bottom-left-radius: 23px
+  border-top-left-radius: 23px
+  background-color: #e1e1e1
+  border: 1px solid #e6e6e6
+  height: 46px
+  width: 222px
+  padding: 0 30px
+
+.subscribe__button
+  height: 46px
+  padding-left: 18px
+  padding-right: 20px
+  margin-left: -1px
+  border-radius: 0 23px 23px 0
+  background-color: $site-color
+  color: #ffffff
+  +font(14px, 400, 0.35px)
+  border: 1px solid $site-color
+  transition: background-color 1s, color 1s
+
+.subscribe__button:hover
+  background-color: #ffffff
+  color: $site-color
+
+.footer
+  height: 349px
+
+.footer__content
+  height: 100%
+  @extend %space-between
+  margin-top: 109px
+
+.footer__about
+  width: 427px
+
+.footer__logo
+  color: #222222
+  font-size: 27px
+  font-weight: 300
+  text-transform: uppercase
+  display: flex
+  align-items: center
+
+.footer__logo__img
+  margin-right: 13px
+
+.footer__logo_d
+  color: #f16d7f
+  font-weight: 400
+  letter-spacing: 0.68px
+
+.footer__p
+  color: #898989
+  +font(14px, 300, 0.35px)
+  margin-top: 29px
+  line-height: 24px
+
+.footer__company
+  width: 105px
+
+.footer__span
+  color: $site-color
+  +font(18px, 700, 0.45px)
+  text-transform: uppercase
+
+.footer_ul
+  list-style-type: none
+  height: 51px
+  justify-content: center
+  align-items: center
+  margin-top: 45px
+
+.footer_li
+  margin-bottom: 25px
+
+.footer__list
+  color: #898989
+  +font(16px, 400, 0.4px)
+
+.footer__list:hover
+  color: $site-color
+
+.footer__inform
+  width: 150px
+
+.footer__shop
+  width: 164px
+
+.copyrigth
+  height: 79px
+  background-color: #e6e6e6
+
+.copyright__content
+  height: 100%
+  @extend %space-between
+  align-items: center
+
+.copyright_span
+  color: #7a7a7a
+  +font(16px, 400, 0.4px)
+
+.copyright__social
+  display: flex
+
+.copyright__social a
+  margin-right: 8px
+
+.copyright__link
+  height: 32px
+  width: 32px
+
+.social1
+  @extend %align-items
+  justify-content: center
+  background-color: #fff
+  transition: background-color 1s
+
+.social1:hover
+  background-color: $site-color
+
+.social1:after
+  content: "\f09a"
+  font-family: $icon-font
+  color: #b2b2b2
+  transition: color 1s
+
+.social1:hover:after
+  color: #f7f7f8
+
+.social2
+  @extend %align-items
+  justify-content: center
+  background-color: #fff
+  transition: background-color 1s
+
+.social2:hover
+  background-color: $site-color
+
+.social2:after
+  content: "\f099"
+  font-family: $icon-font
+  color: #b2b2b2
+  transition: color 1s
+
+.social2:hover:after
+  color: #f7f7f8
+
+.social3
+  @extend %align-items
+  justify-content: center
+  background-color: #fff
+  transition: background-color 1s
+
+.social3:hover
+  background-color: $site-color
+
+.social3:after
+  content: "\f0e1"
+  font-family: $icon-font
+  color: #b2b2b2
+  transition: color 1s
+
+.social3:hover:after
+  color: #f7f7f8
+
+.social4
+  @extend %align-items
+  justify-content: center
+  background-color: #fff
+  transition: background-color 1s
+
+.social4:hover
+  background-color: $site-color
+
+.social4:after
+  content: "\f231"
+  font-family: $icon-font
+  color: #b2b2b2
+  transition: color 1s
+
+.social4:hover:after
+  color: #f7f7f8
+
+.social5
+  @extend %align-items
+  justify-content: center
+  background-color: #fff
+  transition: background-color 1s
+
+.social5:hover
+  background-color: $site-color
+
+.social5:after
+  content: "\f0d5"
+  font-family: $icon-font
+  color: #b2b2b2
+  transition: color 1s
+
+.social5:hover:after
+  color: #f7f7f8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -897,377 +1212,18 @@ details.products__category[open] .symbol__aside_3:after
 
 
 
-.subscribe
-  height: 438px
-  @extend %align-items
-  background-image: url("../img/subscribe.jpg")
-  margin: 0 auto
 
 
-.subscribe__content
-  height: 100%
-  width: 100%
-  background: rgba(247, 247, 247, 0.4)
-  @extend %align-items
 
 
-.subscribe__left
-  width: 50%
-  height: 100%
-  border-right: 0.5px solid #fff
-  /*    display: flex*/
-  align-items: center
 
 
-.subscribe__right
-  width: 50%
-  height: 100%
-  border-left: 0.5px solid #fff
 
 
-.subscribe__p
-  color: #222224
-  font-size: 16px
-  font-style: italic
-  letter-spacing: 0.4px
-  display: flex
-  width: 500px
-  line-height: 1.7
-  margin-left: 230px
-  margin-top: 123px
 
 
-.subscribe__p:before
-  content: url("../img/subscribe_photo.png")
-  width: 83px
-  height: 83px
-  margin-top: -6px
-  margin-right: 28px
 
 
-.subscribe__h3
-  margin-top: 19px
-  margin-left: 343px
-  color: $site-color
-  font-size: 16px
-  font-weight: 700
-
-
-.subscribe__h4
-  margin-left: 343px
-  font-weight: 700
-  color: #222224
-  font-size: 12px
-  letter-spacing: 0.3px
-
-
-.subscribe__ul
-  display: flex
-  list-style-type: none
-  margin-top: 41px
-  margin-left: 344px
-
-
-.subscribe__link
-  background-color: #d6d6d6
-  height: 4px
-  width: 38px
-  margin-right: 13px
-
-
-a:focus .subscribe__link
-  background-color: $site-color
-  height: 4px
-  width: 38px
-  margin-right: 13px
-
-
-a:hover .subscribe__link
-  background-color: $site-color
-
-
-.subscribe__h1
-  color: #222224
-  font-weight: 400
-  font-size: 24px
-  letter-spacing: 0.6px
-  text-transform: uppercase
-  margin-bottom: 5px
-  margin-top: 148px
-  margin-left: 219px
-
-
-.subscribe__h2
-  color: #222224
-  font-weight: 400
-  font-size: 14px
-  text-transform: uppercase
-  margin-left: 146px
-  letter-spacing: 0.35px
-  margin-bottom: 35px
-
-
-.subscribe__form
-  @extend %align-items
-  margin-left: 92px
-
-
-.subscribe__input
-  border-bottom-left-radius: 23px
-  border-top-left-radius: 23px
-  background-color: #e1e1e1
-  border: 1px solid #e6e6e6
-  height: 46px
-  width: 222px
-  padding: 0 30px
-
-
-.subscribe__button
-  height: 46px
-  padding-left: 18px
-  padding-right: 20px
-  margin-left: -1px
-  border-radius: 0 23px 23px 0
-  background-color: $site-color
-  color: #ffffff
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-  border: 1px solid $site-color
-  transition: background-color 1s, color 1s
-
-
-.subscribe__button:hover
-  background-color: #ffffff
-  color: $site-color
-
-
-.footer
-  height: 349px
-
-
-.footer__content
-  height: 100%
-  @extend %space-between
-  margin-top: 109px
-
-
-.footer__about
-  width: 427px
-
-
-.footer__p
-  color: #898989
-  font-size: 14px
-  font-weight: 300
-  letter-spacing: 0.35px
-  margin-top: 29px
-  line-height: 1.7
-
-
-.footer__company
-  width: 105px
-
-
-.footer__inform
-  width: 150px
-
-
-.footer__shop
-  width: 164px
-
-
-.footer_ul
-  list-style-type: none
-  height: 51px
-  justify-content: center
-  align-items: center
-  margin-top: 45px
-
-
-.footer__span
-  color: $site-color
-  font-size: 18px
-  font-weight: 700
-  text-transform: uppercase
-  letter-spacing: 0.45px
-
-
-.footer__list
-  color: #898989
-  font-size: 16px
-  font-weight: 400
-  letter-spacing: 0.4px
-
-
-.footer__list:hover
-  color: $site-color
-
-
-.footer_li
-  margin-bottom: 25px
-
-
-.copyrigth
-  height: 79px
-  background-color: #e6e6e6
-
-
-.cpoyright
-  height: 100%
-  @extend %space-between
-  align-items: center
-
-
-.copyright_span
-  color: #7a7a7a
-  font-size: 16px
-  font-weight: 400
-
-  letter-spacing: 0.4px
-
-
-.copyright__link
-  height: 32px
-  width: 32px
-
-
-.copyright__social
-  display: flex
-
-
-.copyright__social a
-  margin-right: 8px
-
-
-.social1
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: #fff
-  transition: background-color 1s
-
-
-.social1:hover
-  background-color: $site-color
-
-
-.social1:after
-  content: "\f09a"
-  font-family: $icon-font
-  color: #b2b2b2
-  transition: color 1s
-
-
-.social1:hover:after
-  color: #f7f7f8
-
-
-.social2
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: #fff
-  transition: background-color 1s
-
-
-.social2:hover
-  background-color: $site-color
-
-
-.social2:after
-  content: "\f099"
-  font-family: $icon-font
-  color: #b2b2b2
-  transition: color 1s
-
-
-.social2:hover:after
-  color: #f7f7f8
-
-
-.social3
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: #fff
-  transition: background-color 1s
-
-
-.social3:hover
-  background-color: $site-color
-
-
-.social3:after
-  content: "\f0e1"
-  font-family: $icon-font
-  color: #b2b2b2
-  transition: color 1s
-
-
-.social3:hover:after
-  color: #f7f7f8
-
-
-.social4
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: #fff
-  transition: background-color 1s
-
-
-.social4:hover
-  background-color: $site-color
-
-
-.social4:after
-  content: "\f231"
-  font-family: $icon-font
-  color: #b2b2b2
-  transition: color 1s
-
-
-.social4:hover:after
-  color: #f7f7f8
-
-
-.social5
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: #fff
-  transition: background-color 1s
-
-
-.social5:hover
-  background-color: $site-color
-
-
-.social5:after
-  content: "\f0d5"
-  font-family: $icon-font
-  color: #b2b2b2
-  transition: color 1s
-
-
-.social5:hover:after
-  color: #f7f7f8
-
-
-.futured__info
-  padding: 20px 15px
-
-
-.futured__a
-  color: $text-color
-  font-size: 13px
-  font-weight: 400
-  text-transform: uppercase
-
-
-.futured__a:hover
-  color: $site-color
 
 
 
