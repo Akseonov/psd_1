@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Корзина</title>
+    <title>Товар</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -11,43 +11,44 @@
 
 <body>
 <header class="header">
-    <div class="container header__content">
+    <div class="header__content container">
         <div class="header__block">
-            <a href="index.html" class="logo">
-                <img class="logo__img" src="img/logo.png" alt="logo">BRAN<span class="logo_d">D</span>
+            <a href="#" class="header__logo">
+                <img src="img/logo.png" alt="logo">BRAN<span>D</span>
             </a>
             <form class="header__form" action="#">
-                <details class="form__browse_botton">
+                <details class="form__browse__button">
                     <summary class="form__browse symbol">Browse</summary>
                     <div class="form__drop">
                         <span class="drop__name">Women</span>
                         <hr class="drop__hr">
                         <ul class="drop__menu">
-                            <li class="drop__list"><a href="product.html" class="drop__a">Dresses</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Tops</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Sweaters/Knits</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Jackets/Coats</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Blazers</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Denim</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Leggings/Pants</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Skirts/Shorts</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Accessories </a></li>
+                            <li><a href="product.html" class="drop__a">Dresses</a></li>
+                            <li><a href="product.html" class="drop__a">Tops</a></li>
+                            <li><a href="product.html" class="drop__a">Sweaters/Knits</a></li>
+                            <li><a href="product.html" class="drop__a">Jackets/Coats</a></li>
+                            <li><a href="product.html" class="drop__a">Blazers</a></li>
+                            <li><a href="product.html" class="drop__a">Denim</a></li>
+                            <li><a href="product.html" class="drop__a">Leggings/Pants</a></li>
+                            <li><a href="product.html" class="drop__a">Skirts/Shorts</a></li>
+                            <li><a href="product.html" class="drop__a">Accessories </a></li>
                         </ul>
                         <span class="drop__name">Men</span>
                         <hr class="drop__hr">
                         <ul class="drop__menu">
-                            <li class="drop__list"><a href="product.html" class="drop__a">Dresses</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Tops</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Sweaters/Knits</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Jackets/Coats</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Blazers</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Denim</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Leggings/Pants</a></li>
+                            <li><a href="product.html" class="drop__a">Dresses</a></li>
+                            <li><a href="product.html" class="drop__a">Tops</a></li>
+                            <li><a href="product.html" class="drop__a">Sweaters/Knits</a></li>
+                            <li><a href="product.html" class="drop__a">Jackets/Coats</a></li>
+                            <li><a href="product.html" class="drop__a">Blazers</a></li>
+                            <li><a href="product.html" class="drop__a">Denim</a></li>
+                            <li><a href="product.html" class="drop__a">Leggings/Pants</a></li>
                         </ul>
                     </div>
                 </details>
-                <input class="form" type="text" placeholder="Search for Item..." pattern="\S+[А-яа-я]">
-                <button class="form__button"><i class="fa fa-search"></i></button>
+                <label for="header-input"></label>
+                <input class="header__form__input" type="text" id="header-input" name="header-input" placeholder="Search for Item..." pattern="\S+[А-яа-я]">
+                <button class="header__form__button"><i class="fa fa-search"></i></button>
             </form>
         </div>
         <div class="header__block">
@@ -55,20 +56,20 @@
                 <img class="header__cart" src="img/cart.svg" alt="cart">
                 <div class="cart__drop">
                     <div class="cart__prod">
-                        <img src="img/cart_prod1.jpg" alt="">
+                        <img src="img/cart_prod1.jpg" alt="cart_prod1">
                         <div class="prod_block">
                             <p class="prod__name">Rebox Zane</p>
-                            <img src="img/prod_rait.png" alt="">
+                            <img src="img/prod_rait.png" alt="prod_rait">
                             <p class="prod__price">1 x $250</p>
                         </div>
                         <i class="fa fa-times-circle"></i>
                     </div>
                     <hr class="cart__hr">
                     <div class="cart__prod">
-                        <img src="img/cart_prod2.jpg" alt="">
+                        <img src="img/cart_prod2.jpg" alt="cart_prod2">
                         <div class="prod_block">
                             <p class="prod__name">Rebox Zane</p>
-                            <img src="img/prod_rait.png" alt="">
+                            <img src="img/prod_rait.png" alt="prod_rait">
                             <p class="prod__price">1 x $250</p>
                         </div>
                         <i class="fa fa-times-circle"></i>
@@ -82,13 +83,13 @@
                     <a class="cart__button_a" href="shopping_cart.html">Go to cart</a>
                 </div>
             </div>
-            <a href="#" class="botton symbol">My Account</a>
+            <a href="#" class="header__cart__button symbol">My Account</a>
         </div>
     </div>
 </header>
 <nav>
     <ul class="menu">
-        <li class="menu__list"><a href="index.html" class="menu__link">Home</a></li>
+        <li class="menu__list"><a href="#" class="menu__link">Home</a></li>
         <li class="menu__list"><a href="product.html" class="menu__link">Man</a>
             <div class="menu__mega drop__flex">
                 <div class="menu__mega__drop">
@@ -278,10 +279,10 @@
         </li>
     </ul>
 </nav>
-<section class="breadcrumb__container">
+<section class="breadcrumb">
     <div class="breadcrumb__content container">
         <div class="breadcrumb__h1">New Arrivals</div>
-        <nav class="breadcrumb__nav">
+        <nav>
             <ol class="breadcrumb__ol">
                 <li class="breadcrumb__item"><a class="breadcrumb__a" href="index.html">Home</a></li>
                 <li class="breadcrumb__item"><a class="breadcrumb__a" href="#">Men</a></li>
@@ -295,39 +296,39 @@
     <a href="#" class="arrow_right"></a>
 </div>
 <div class="product__description container">
-    <h3 class="product__description_h3">WOMEN COLLECTION</h3>
-    <h1 class="product__description_h1">Moschino Cheap And Chic</h1>
-    <div class="product__description_text">
+    <h3 class="product__description__h3">WOMEN COLLECTION</h3>
+    <h1 class="product__description__h1">Moschino Cheap And Chic</h1>
+    <div class="product__description__text">
         Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate
         collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather
         than exceptional portals.
     </div>
-    <div class="product__description_box">
-        <p class="product__description_box_p">MATERIAL: <span>COTTON</span></p>
-        <p class="product__description_box_p">DESIGNER: <span>BINBURHAN</span></p>
+    <div class="product__description__box">
+        <p class="product__description__box__p">MATERIAL: <span>COTTON</span></p>
+        <p class="product__description__box__p">DESIGNER: <span>BINBURHAN</span></p>
     </div>
-    <p class="product__description_price">$561</p>
-    <hr class="product__description_hr">
-    <div class="product__description_choose">
-        <div class="product__description_choose_b">
-            <p class="product__description_choose_p">CHOOSE COLOR</p>
-            <details class="product__description_choose_details">
-                <summary class="product__description_choose_summary product__description_choose_symbol">Red</summary>
-                <div class="products__drop_3">
+    <p class="product__description__price">$561</p>
+    <hr class="product__description__hr">
+    <div class="product__description__choose">
+        <div class="product__description__choose__b">
+            <p class="product__description__choose__p">CHOOSE COLOR</p>
+            <details class="product__description__choose__details">
+                <summary class="product__description__choose__summary product__description__choose__symbol">Red</summary>
+                <div class="products__drop__3">
                     <div class="products__drop__item1">
                         Green
                     </div>
                     <div class="products__drop__item2">
                         Blue
                     </div>
-                </div>
+                </div>_
             </details>
         </div>
-        <div class="product__description_choose_b">
-            <p class="product__description_choose_p">CHOOSE SIZE</p>
-            <details class="product__description_choose_details">
-                <summary class="product__description_choose_summary1 product__description_choose_symbol1">XXL</summary>
-                <div class="products__drop_3">
+        <div class="product__description__choose__b">
+            <p class="product__description__choose__p">CHOOSE SIZE</p>
+            <details class="product__description__choose__details">
+                <summary class="product__description__choose__summary1 product__description__choose__symbol1">XXL</summary>
+                <div class="products__drop__3">
                     <div class="products__drop__item3">
                         XL
                     </div>
@@ -349,16 +350,17 @@
                 </div>
             </details>
         </div>
-        <div class="product__description_choose_b">
-            <p class="product__description_choose_p">QUANTITY</p>
-            <input class="product__description_choose_input" type="text" placeholder="2" pattern="\S+[1-100]">
+        <div class="product__description__choose__b">
+            <p class="product__description__choose__p">QUANTITY</p>
+            <label for="quantity"></label>
+            <input class="product__description__choose__input" name="quantity" id="quantity" type="text" placeholder="2" pattern="\S+[1-100]">
         </div>
     </div>
-    <a href="#" class="product__description_button"><img src="img/cart_pink.svg" alt="">Add to Cart</a>
+    <a href="#" class="product__description__button"><img src="img/cart_pink.svg" alt="">Add to Cart</a>
 </div>
-<div class="you_may_like container">
-    <h1 class="you_may_like_h1">you may like also</h1>
-    <div class="you_may_like_cont">
+<div class="you-may-like container">
+    <h1 class="you-may-like__h1">you may like also</h1>
+    <div class="you-may-like__cont">
         <article class="fetured__item">
             <a href="#">
                 <img src="img/you_may_like1.jpg" alt="you_may_like1">
@@ -410,7 +412,7 @@
     </div>
 </div>
 <section class="subscribe">
-    <div class="subscribe__content">
+    <div class="subscribe__content container">
         <aside class="subscribe__left">
             <p class="subscribe__p">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
                 condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
@@ -432,7 +434,8 @@
             <h1 class="subscribe__h1">Subscribe</h1>
             <h2 class="subscribe__h2">FOR OUR NEWLETTER AND PROMOTION</h2>
             <form class="subscribe__form" action="#">
-                <input class="subscribe__input" id="email" placeholder="Enter Your Email" pattern="\S+@[a-z]+.[a-z]+">
+                <label for="subscribe-input"></label>
+                <input class="subscribe__input" id="subscribe-input" name="subscribe-input" placeholder="Enter Your Email" pattern="\S+@[a-z]+.[a-z]+">
                 <button class="subscribe__button">Subscribe</button>
             </form>
         </div>
@@ -441,8 +444,8 @@
 <div class="footer container">
     <div class="footer__content">
         <div class="footer__about">
-            <a href="#" class="logo">
-                <img class="logo__img" src="img/logo.png" alt="logo">BRAN<span class="logo_d">D</span>
+            <a href="#" class="footer__logo">
+                <img class="footer__logo__img" src="img/logo.png" alt="logo">BRAN<span class="footer__logo_d">D</span>
             </a>
             <p class="footer__p">Objectively transition extensive data rather than cross functional solutions.
                 Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate
@@ -455,7 +458,7 @@
             <span class="footer__span">Company</span>
             <nav>
                 <ul class="footer_ul">
-                    <li class="footer_li"><a href="index.html" class="footer__list">Home</a></li>
+                    <li class="footer_li"><a href="#" class="footer__list">Home</a></li>
                     <li class="footer_li"><a href="product.html" class="footer__list">Shop</a></li>
                     <li class="footer_li"><a href="#" class="footer__list">About</a></li>
                     <li class="footer_li"><a href="#" class="footer__list">How It Works</a></li>
@@ -490,7 +493,7 @@
     </div>
 </div>
 <footer class="copyrigth">
-    <div class="cpoyright container">
+    <div class="copyright__content container">
         <span class="copyright__span">© 2017 Brand All Rights Reserved.</span>
         <div class="copyright__social">
             <a href="#">
