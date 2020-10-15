@@ -11,64 +11,65 @@
 
 <body>
 <header class="header">
-    <div class="container header__content">
+    <div class="header__content container">
         <div class="header__block">
-            <a href="index.html" class="logo">
-                <img class="logo__img" src="img/logo.png" alt="logo">BRAN<span class="logo_d">D</span>
+            <a href="#" class="header__logo">
+                <img src="img/logo.png" alt="logo">BRAN<span>D</span>
             </a>
             <form class="header__form" action="#">
-                <details class="form__browse_botton">
+                <details class="form__browse__button">
                     <summary class="form__browse symbol">Browse</summary>
                     <div class="form__drop">
                         <span class="drop__name">Women</span>
                         <hr class="drop__hr">
                         <ul class="drop__menu">
-                            <li class="drop__list"><a href="product.html" class="drop__a">Dresses</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Tops</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Sweaters/Knits</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Jackets/Coats</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Blazers</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Denim</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Leggings/Pants</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Skirts/Shorts</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Accessories </a></li>
+                            <li><a href="product.html" class="drop__a">Dresses</a></li>
+                            <li><a href="product.html" class="drop__a">Tops</a></li>
+                            <li><a href="product.html" class="drop__a">Sweaters/Knits</a></li>
+                            <li><a href="product.html" class="drop__a">Jackets/Coats</a></li>
+                            <li><a href="product.html" class="drop__a">Blazers</a></li>
+                            <li><a href="product.html" class="drop__a">Denim</a></li>
+                            <li><a href="product.html" class="drop__a">Leggings/Pants</a></li>
+                            <li><a href="product.html" class="drop__a">Skirts/Shorts</a></li>
+                            <li><a href="product.html" class="drop__a">Accessories </a></li>
                         </ul>
                         <span class="drop__name">Men</span>
                         <hr class="drop__hr">
                         <ul class="drop__menu">
-                            <li class="drop__list"><a href="product.html" class="drop__a">Dresses</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Tops</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Sweaters/Knits</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Jackets/Coats</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Blazers</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Denim</a></li>
-                            <li class="drop__list"><a href="product.html" class="drop__a">Leggings/Pants</a></li>
+                            <li><a href="product.html" class="drop__a">Dresses</a></li>
+                            <li><a href="product.html" class="drop__a">Tops</a></li>
+                            <li><a href="product.html" class="drop__a">Sweaters/Knits</a></li>
+                            <li><a href="product.html" class="drop__a">Jackets/Coats</a></li>
+                            <li><a href="product.html" class="drop__a">Blazers</a></li>
+                            <li><a href="product.html" class="drop__a">Denim</a></li>
+                            <li><a href="product.html" class="drop__a">Leggings/Pants</a></li>
                         </ul>
                     </div>
                 </details>
-                <input class="form" type="text" placeholder="Search for Item..." pattern="\S+[А-яа-я]">
-                <button class="form__button"><i class="fa fa-search"></i></button>
+                <label for="header-input"></label>
+                <input class="header__form__input" type="text" id="header-input" name="header-input" placeholder="Search for Item..." pattern="\S+[А-яа-я]">
+                <button class="header__form__button"><i class="fa fa-search"></i></button>
             </form>
         </div>
         <div class="header__block">
-            <div class="header__cart__block">
-                <img class="header__cart" src="img/cart.svg" alt="cart">
+            <div class="header_-cart__block">
+                <img class="header_-cart" src="img/cart.svg" alt="cart">
                 <div class="cart__drop">
                     <div class="cart__prod">
-                        <img src="img/cart_prod1.jpg" alt="">
+                        <img src="img/cart_prod1.jpg" alt="cart_prod1">
                         <div class="prod_block">
                             <p class="prod__name">Rebox Zane</p>
-                            <img src="img/prod_rait.png" alt="">
+                            <img src="img/prod_rait.png" alt="prod_rait">
                             <p class="prod__price">1 x $250</p>
                         </div>
                         <i class="fa fa-times-circle"></i>
                     </div>
                     <hr class="cart__hr">
                     <div class="cart__prod">
-                        <img src="img/cart_prod2.jpg" alt="">
+                        <img src="img/cart_prod2.jpg" alt="cart_prod2">
                         <div class="prod_block">
                             <p class="prod__name">Rebox Zane</p>
-                            <img src="img/prod_rait.png" alt="">
+                            <img src="img/prod_rait.png" alt="prod_rait">
                             <p class="prod__price">1 x $250</p>
                         </div>
                         <i class="fa fa-times-circle"></i>
@@ -79,16 +80,16 @@
                         <p class="cart__total__price">$500.00</p>
                     </div>
                     <a class="cart__button_a" href="checkout.html">Checkout</a>
-                    <a class="cart__button_a" href="#">Go to cart</a>
+                    <a class="cart__button_a" href="shopping_cart.html">Go to cart</a>
                 </div>
             </div>
-            <a href="#" class="botton symbol">My Account</a>
+            <a href="#" class="header_-cart__button symbol">My Account</a>
         </div>
     </div>
 </header>
 <nav>
     <ul class="menu">
-        <li class="menu__list"><a href="index.html" class="menu__link">Home</a></li>
+        <li class="menu__list"><a href="#" class="menu__link">Home</a></li>
         <li class="menu__list"><a href="product.html" class="menu__link">Man</a>
             <div class="menu__mega drop__flex">
                 <div class="menu__mega__drop">
@@ -278,10 +279,10 @@
         </li>
     </ul>
 </nav>
-<section class="breadcrumb__container">
+<section class="breadcrumb">
     <div class="breadcrumb__content container">
         <div class="breadcrumb__h1">New Arrivals</div>
-        <nav class="breadcrumb__nav">
+        <nav>
             <ol class="breadcrumb__ol">
                 <li class="breadcrumb__item"><a class="breadcrumb__a" href="index.html">Home</a></li>
                 <li class="breadcrumb__item"><a class="breadcrumb__a" href="#">Men</a></li>
@@ -290,134 +291,140 @@
         </nav>
     </div>
 </section>
-<div class="shopping_cart container">
-    <div class="shopping_cart__h">
-        <div class="shopping_cart_box1"><p class="shopping_cart__h1">Product Details</p></div>
-        <div class="shopping_cart_box2 shopping_cart_center"><p class="shopping_cart__h1">Unite Price</p></div>
-        <div class="shopping_cart_box3 shopping_cart_center"><p class="shopping_cart__h1">Quantity</p></div>
-        <div class="shopping_cart_box4 shopping_cart_center"><p class="shopping_cart__h1">Shipping</p></div>
-        <div class="shopping_cart_box5 shopping_cart_center"><p class="shopping_cart__h1">Subtotal</p></div>
-        <div class="shopping_cart_box6 shopping_cart_center"><p class="shopping_cart__h1">ACTION</p></div>
+<div class="shopping-cart container">
+    <div class="shopping-cart__h">
+        <div class="shopping-cart__box1"><p class="shopping-cart__h1">Product Details</p></div>
+        <div class="shopping-cart__box2 shopping-cart__center"><p class="shopping-cart__h1">Unite Price</p></div>
+        <div class="shopping-cart__box3 shopping-cart__center"><p class="shopping-cart__h1">Quantity</p></div>
+        <div class="shopping-cart__box4 shopping-cart__center"><p class="shopping-cart__h1">Shipping</p></div>
+        <div class="shopping-cart__box5 shopping-cart__center"><p class="shopping-cart__h1">Subtotal</p></div>
+        <div class="shopping-cart__box6 shopping-cart__center"><p class="shopping-cart__h1">ACTION</p></div>
     </div>
-    <div class="shopping_cart__item">
-        <div class="shopping_cart_box1">
-            <div class="shopping_cart_box1_img">
-                <img class="shopping_cart_img" src="img/products_item_1.jpg" alt="products_item_1">
+    <div class="shopping-cart__item">
+        <div class="shopping-cart__box1">
+            <div class="shopping-cart__box1__img">
+                <img class="shopping-cart__img" src="img/products_item_1.jpg" alt="products_item_1">
             </div>
-            <div class="shopping_cart_box1_p_cont">
-                <p class="shopping_cart_box1_p">Mango People T-shirt</p>
-                <p class="shopping_cart_box1_p1"><span class="shopping_cart_box1_span">Color:</span> Red</p>
-                <p class="shopping_cart_box1_p1"><span class="shopping_cart_box1_span">Size:</span> Xll</p>
-            </div>
-        </div>
-        <div class="shopping_cart_box2 shopping_cart_center">
-            <p class="shopping_cart_box1_p2">$150</p>
-        </div>
-        <div class="shopping_cart_box3 shopping_cart_center">
-            <input class="shopping_cart_box1_input" type="text" placeholder="2" pattern="\S+[1-100]">
-        </div>
-        <div class="shopping_cart_box4 shopping_cart_center">
-            <p class="shopping_cart_box1_p3">FREE</p>
-        </div>
-        <div class="shopping_cart_box5 shopping_cart_center">
-            <p class="shopping_cart_box1_p2">$300</p>
-        </div>
-        <div class="shopping_cart_box6 shopping_cart_center">
-            <div class="shopping_cart_box6_i"></div>
-        </div>
-    </div>
-    <div class="shopping_cart__item">
-        <div class="shopping_cart_box1">
-            <div class="shopping_cart_box1_img">
-                <img class="shopping_cart_img" src="img/products_item_2.jpg" alt="products_item_2">
-            </div>
-            <div class="shopping_cart_box1_p_cont">
-                <p class="shopping_cart_box1_p">Mango People T-shirt</p>
-                <p class="shopping_cart_box1_p1"><span class="shopping_cart_box1_span">Color:</span> Red</p>
-                <p class="shopping_cart_box1_p1"><span class="shopping_cart_box1_span">Size:</span> Xll</p>
+            <div>
+                <p>Mango People T-shirt</p>
+                <p class="shopping-cart__box1__p1"><span class="shopping-cart__box1__span">Color:</span> Red</p>
+                <p class="shopping-cart__box1__p1"><span class="shopping-cart__box1__span">Size:</span> Xll</p>
             </div>
         </div>
-        <div class="shopping_cart_box2 shopping_cart_center">
-            <p class="shopping_cart_box1_p2">$150</p>
+        <div class="shopping-cart__box2 shopping-cart__center">
+            <p class="shopping-cart__box1__p2">$150</p>
         </div>
-        <div class="shopping_cart_box3 shopping_cart_center">
-            <input class="shopping_cart_box1_input" type="text" placeholder="2" pattern="\S+[1-100]">
+        <div class="shopping-cart__box3 shopping-cart__center">
+            <label for="cart-box1"></label>
+            <input class="shopping-cart__box1__input" id="cart-box1" type="text" placeholder="2" pattern="\S+[1-100]">
         </div>
-        <div class="shopping_cart_box4 shopping_cart_center">
-            <p class="shopping_cart_box1_p3">FREE</p>
+        <div class="shopping-cart__box4 shopping-cart__center">
+            <p class="shopping-cart__box1__p3">FREE</p>
         </div>
-        <div class="shopping_cart_box5 shopping_cart_center">
-            <p class="shopping_cart_box1_p2">$300</p>
+        <div class="shopping-cart__box5 shopping-cart__center">
+            <p class="shopping-cart__box1__p2">$300</p>
         </div>
-        <div class="shopping_cart_box6 shopping_cart_center">
-            <div class="shopping_cart_box6_i"></div>
+        <div class="shopping-cart__box6 shopping-cart__center">
+            <div class="shopping-cart__box6__i"></div>
         </div>
     </div>
-    <div class="shopping_cart__item_l">
-        <div class="shopping_cart_box1">
-            <div class="shopping_cart_box1_img">
-                <img class="shopping_cart_img" src="img/products_item_8.jpg" alt="products_item_8">
+    <div class="shopping-cart__item">
+        <div class="shopping-cart__box1">
+            <div class="shopping-cart__box1__img">
+                <img class="shopping-cart__img" src="img/products_item_1.jpg" alt="products_item_1">
             </div>
-            <div class="shopping_cart_box1_p_cont">
-                <p class="shopping_cart_box1_p">Mango People T-shirt</p>
-                <p class="shopping_cart_box1_p1"><span class="shopping_cart_box1_span">Color:</span> Red</p>
-                <p class="shopping_cart_box1_p1"><span class="shopping_cart_box1_span">Size:</span> Xll</p>
+            <div>
+                <p>Mango People T-shirt</p>
+                <p class="shopping-cart__box1__p1"><span class="shopping-cart__box1__span">Color:</span> Red</p>
+                <p class="shopping-cart__box1__p1"><span class="shopping-cart__box1__span">Size:</span> Xll</p>
             </div>
         </div>
-        <div class="shopping_cart_box2 shopping_cart_center">
-            <p class="shopping_cart_box1_p2">$150</p>
+        <div class="shopping-cart__box2 shopping-cart__center">
+            <p class="shopping-cart__box1__p2">$150</p>
         </div>
-        <div class="shopping_cart_box3 shopping_cart_center">
-            <input class="shopping_cart_box1_input" type="text" placeholder="2" pattern="\S+[1-100]">
+        <div class="shopping-cart__box3 shopping-cart__center">
+            <label for="cart-box2"></label>
+            <input class="shopping-cart__box1__input" id="cart-box2" type="text" placeholder="2" pattern="\S+[1-100]">
         </div>
-        <div class="shopping_cart_box4 shopping_cart_center">
-            <p class="shopping_cart_box1_p3">FREE</p>
+        <div class="shopping-cart__box4 shopping-cart__center">
+            <p class="shopping-cart__box1__p3">FREE</p>
         </div>
-        <div class="shopping_cart_box5 shopping_cart_center">
-            <p class="shopping_cart_box1_p2">$300</p>
+        <div class="shopping-cart__box5 shopping-cart__center">
+            <p class="shopping-cart__box1__p2">$300</p>
         </div>
-        <div class="shopping_cart_box6 shopping_cart_center">
-            <div class="shopping_cart_box6_i"></div>
+        <div class="shopping-cart__box6 shopping-cart__center">
+            <div class="shopping-cart__box6__i"></div>
         </div>
     </div>
-    <div class="shopping_cart__botton">
-        <a href="#" class="shopping_cart__a">cLEAR SHOPPING CART</a>
-        <a href="#" class="shopping_cart__a">cONTINUE sHOPPING</a>
+    <div class="shopping-cart__item shopping-cart__item_l">
+        <div class="shopping-cart__box1">
+            <div class="shopping-cart__box1__img">
+                <img class="shopping-cart__img" src="img/products_item_1.jpg" alt="products_item_1">
+            </div>
+            <div>
+                <p>Mango People T-shirt</p>
+                <p class="shopping-cart__box1__p1"><span class="shopping-cart__box1__span">Color:</span> Red</p>
+                <p class="shopping-cart__box1__p1"><span class="shopping-cart__box1__span">Size:</span> Xll</p>
+            </div>
+        </div>
+        <div class="shopping-cart__box2 shopping-cart__center">
+            <p class="shopping-cart__box1__p2">$150</p>
+        </div>
+        <div class="shopping-cart__box3 shopping-cart__center">
+            <label for="cart-box3"></label>
+            <input class="shopping-cart__box1__input" id="cart-box3" type="text" placeholder="2" pattern="\S+[1-100]">
+        </div>
+        <div class="shopping-cart__box4 shopping-cart__center">
+            <p class="shopping-cart__box1__p3">FREE</p>
+        </div>
+        <div class="shopping-cart__box5 shopping-cart__center">
+            <p class="shopping-cart__box1__p2">$300</p>
+        </div>
+        <div class="shopping-cart__box6 shopping-cart__center">
+            <div class="shopping-cart__box6__i"></div>
+        </div>
     </div>
-    <div class="shopping_cart__proceed">
-        <div class="shopping_cart__proceed_box1">
-            <h1 class="shopping_cart_h1">Shipping Adress</h1>
-            <details class="shopping_cart__details">
-                <summary class="shopping_cart__summary shopping_cart__symbol">Bangladesh</summary>
-                <div class="products__drop_@">
-                    <div class="products__drop__item">
-                        18
+    <div class="shopping-cart__button">
+        <a href="#" class="shopping-cart__a">cLEAR SHOPPING CART</a>
+        <a href="#" class="shopping-cart__a">cONTINUE sHOPPING</a>
+    </div>
+    <div class="shopping-cart__proceed">
+        <div class="shopping-cart__proceed_box1">
+            <h1 class="shopping-cart_h1">Shipping Adress</h1>
+            <details class="shopping-cart__details">
+                <summary class="shopping-cart__summary shopping-cart__symbol">Bangladesh</summary>
+                <div class="products__drop_cart">
+                    <div class="products__drop__item_cart">
+                        Minsk
                     </div>
-                    <div class="products__drop__item">
-                        27
+                    <div class="products__drop__item_cart">
+                        Kiev
                     </div>
                 </div>
             </details>
-            <input class="shopping_cart__input" type="text" placeholder="State">
-            <input class="shopping_cart__input" type="text" placeholder="Postcode / Zip">
-            <a href="#" class="shopping_cart__proceed_a">get a quote</a>
+            <label for="state"></label>
+            <input class="shopping-cart__input" id="state" type="text" placeholder="State">
+            <label for="zip"></label>
+            <input class="shopping-cart__input" id="zip" type="text" placeholder="Postcode / Zip">
+            <a href="#" class="shopping-cart__proceed__a">get a quote</a>
         </div>
-        <div class="shopping_cart__proceed_box2">
-            <h1 class="shopping_cart_h1">coupon discount</h1>
-            <p class="shopping_cart_p">Enter your coupon code if you have one</p>
-            <input class="shopping_cart__input" type="text" placeholder="State">
-            <a href="#" class="shopping_cart__proceed_a">Apply coupon</a>
+        <div class="shopping-cart__proceed_box2">
+            <h1 class="shopping-cart_h1">coupon discount</h1>
+            <p class="shopping-cart_p">Enter your coupon code if you have one</p>
+            <label for="state2"></label>
+            <input class="shopping-cart__input" id="state2" type="text" placeholder="State">
+            <a href="#" class="shopping-cart__proceed__a">Apply coupon</a>
         </div>
-        <div class="shopping_cart__proceed_box3">
-            <p class="shopping_cart__proceed_box3_p">Sub total&nbsp;&nbsp;&nbsp;&nbsp; $900</p>
-            <p class="shopping_cart__proceed_box3_p2">GRAND TOTAL&nbsp;&nbsp;&nbsp;&nbsp; <span>$900</span></p>
-            <hr class="shopping_cart__proceed_box3_hr">
-            <a href="#" class="shopping_cart__proceed_box3_a">proceed to checkout</a>
+        <div class="shopping-cart__proceed_box3">
+            <p class="shopping-cart__proceed_box3_p">Sub total&nbsp;&nbsp;&nbsp;&nbsp; $900</p>
+            <p class="shopping-cart__proceed_box3_p2">GRAND TOTAL&nbsp;&nbsp;&nbsp;&nbsp; <span>$900</span></p>
+            <hr class="shopping-cart__proceed_box3_hr">
+            <a href="#" class="shopping-cart__proceed__box3__a">proceed to checkout</a>
         </div>
     </div>
 </div>
 <section class="subscribe">
-    <div class="subscribe__content">
+    <div class="subscribe__content container">
         <aside class="subscribe__left">
             <p class="subscribe__p">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
                 condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
@@ -439,7 +446,8 @@
             <h1 class="subscribe__h1">Subscribe</h1>
             <h2 class="subscribe__h2">FOR OUR NEWLETTER AND PROMOTION</h2>
             <form class="subscribe__form" action="#">
-                <input class="subscribe__input" id="email" placeholder="Enter Your Email" pattern="\S+@[a-z]+.[a-z]+">
+                <label for="subscribe-input"></label>
+                <input class="subscribe__input" id="subscribe-input" name="subscribe-input" placeholder="Enter Your Email" pattern="\S+@[a-z]+.[a-z]+">
                 <button class="subscribe__button">Subscribe</button>
             </form>
         </div>
@@ -448,8 +456,8 @@
 <div class="footer container">
     <div class="footer__content">
         <div class="footer__about">
-            <a href="#" class="logo">
-                <img class="logo__img" src="img/logo.png" alt="logo">BRAN<span class="logo_d">D</span>
+            <a href="#" class="footer__logo">
+                <img class="footer__logo__img" src="img/logo.png" alt="logo">BRAN<span class="footer__logo_d">D</span>
             </a>
             <p class="footer__p">Objectively transition extensive data rather than cross functional solutions.
                 Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate
@@ -462,7 +470,7 @@
             <span class="footer__span">Company</span>
             <nav>
                 <ul class="footer_ul">
-                    <li class="footer_li"><a href="index.html" class="footer__list">Home</a></li>
+                    <li class="footer_li"><a href="#" class="footer__list">Home</a></li>
                     <li class="footer_li"><a href="product.html" class="footer__list">Shop</a></li>
                     <li class="footer_li"><a href="#" class="footer__list">About</a></li>
                     <li class="footer_li"><a href="#" class="footer__list">How It Works</a></li>
@@ -497,7 +505,7 @@
     </div>
 </div>
 <footer class="copyrigth">
-    <div class="cpoyright container">
+    <div class="copyright__content container">
         <span class="copyright__span">© 2017 Brand All Rights Reserved.</span>
         <div class="copyright__social">
             <a href="#">

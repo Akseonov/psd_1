@@ -614,6 +614,28 @@ a
   margin-top: 60px
   margin-bottom: 115px
 
+.button
+  color: #ffffff
+  background-color: $site-color
+  font-size: 15px
+  font-weight: 400
+  letter-spacing: 0.38px
+  height: 48px
+  line-height: 48px
+  padding-left: 25px
+  padding-right: 25px
+  border: 1px solid $site-color
+
+.button:hover
+  background-color: #fff
+  color: $site-color
+
+.symbol__arrow:after
+  content: "\f178"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+  margin-left: 8px
+
 .sales
   @extend %align-items
   height: 532px
@@ -1072,6 +1094,23 @@ a:hover .subscribe__link
   display: none
 
 details.products__category[open] .products__category_style
+  color: #ef5b70
+
+details.products__category[open] .symbol__aside_1:after
+  content: "\f0d8"
+  font-family: $icon-font
+  color: #ef5b70
+
+
+details.products__category[open] .symbol__aside_2:after
+  content: "\f0d8"
+  font-family: $icon-font
+  color: #ef5b70
+
+
+details.products__category[open] .symbol__aside_3:after
+  content: "\f0d8"
+  font-family: $icon-font
   color: #ef5b70
 
 .symbol__aside_1:after
@@ -1827,253 +1866,107 @@ details.products__category[open] .products__category_style
   margin-top: 56px
   margin-left: 32px
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.shopping_cart__summary::-webkit-details-marker
-  display: none
-
-.shopping_cart__summary
-  color: #b1b1b1
-  font-size: 13px
-  font-weight: 300
-  line-height: 45px
-  text-align: left
-  padding-left: 20px
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.shopping_cart__symbol:after
-  content: "\f0d7"
-  font-family: $icon-font
-  +font(14px, 400, 0.35px)
-  margin-left: 235px
-
-
-
-
-
-
-
-details.products__category[open] .symbol__aside_1:after
-  content: "\f0d8"
-  font-family: $icon-font
-  color: #ef5b70
-
-
-details.products__category[open] .symbol__aside_2:after
-  content: "\f0d8"
-  font-family: $icon-font
-  color: #ef5b70
-
-
-details.products__category[open] .symbol__aside_3:after
-  content: "\f0d8"
-  font-family: $icon-font
-  color: #ef5b70
-
-
-
-
-
-
-
-.button
-  color: #ffffff
-  background-color: $site-color
-  font-size: 15px
-  font-weight: 400
-  letter-spacing: 0.38px
-  height: 48px
-  line-height: 48px
-  padding-left: 25px
-  padding-right: 25px
-  border: 1px solid $site-color
-
-
-.button:hover
-  background-color: #fff
-  color: $site-color
-
-
-.symbol__arrow:after
-  content: "\f178"
-  font-family: $icon-font
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-  margin-left: 8px
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.shopping_cart__details
-  width: 100%
-  height: 45px
+.shopping-cart
+  margin-top: 90px
+  margin-bottom: 80px
+
+.shopping-cart__h
+  @extend %space-between
+  margin-bottom: 20px
+
+.shopping-cart__box1
+  width: 439px
+  display: flex
+
+.shopping-cart__box2
+  width: 14%
   text-align: center
-  border: 1px solid #eaeaea
-  margin-top: 22px
+
+.shopping-cart__box3
+  width: 14%
+  text-align: center
+
+.shopping-cart__box4
+  width: 12%
+  text-align: center
+
+.shopping-cart__box5
+  width: 12%
+  text-align: center
+
+.shopping-cart__box6
+  width: 5%
+  text-align: center
+
+.shopping-cart__h1
+  color: $text-color
+  +font(13px, 700, -0.2px)
+  text-transform: uppercase
+
+.shopping-cart__center
+  @extend %align-items
+  justify-content: center
+
+.shopping-cart__item
+  @extend %space-between
+  border-top: 1px solid #eaeaea
+  padding: 25px 0
+
+.shopping-cart__item_l
+  border-bottom: 1px solid #eaeaea
+
+.shopping-cart__box1__img
+  margin-right: 21px
+
+.shopping-cart__img
+  width: 100px
+  height: 115px
+
+.shopping-cart__box1__p1
+  margin-bottom: 5px
+  color: #575757
+
+.shopping-cart__box1__span
+  color: #575757
+  font-weight: 700
+
+.shopping-cart_box1_p
+  color: $text-color
+  font-size: 13px
+  font-weight: 700
+  text-transform: uppercase
+  margin: 13px 0 28px 0
+
+.shopping-cart__box1__p2
+  color: #656565
+  font-size: 13px
+  font-weight: 500
 
 
+.shopping-cart__box1__input
+  width: 54px
+  height: 30px
+  text-align: center
 
+.shopping-cart__box1__p3
+  color: #656565
+  font-size: 13px
+  font-weight: 400
+  text-transform: uppercase
 
+.shopping-cart__box6__i::after
+  content: "\f057"
+  font-family: $icon-font
+  color: #c0c0c0
+  font-size: 16px
+  font-weight: 400
+  text-transform: uppercase
 
+.shopping-cart__button
+  @extend %space-between
+  margin-bottom: 63px
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.shopping_cart__a
+.shopping-cart__a
   color: #4a4a4a
   font-size: 14px
   font-weight: 700
@@ -2085,155 +1978,20 @@ details.products__category[open] .symbol__aside_3:after
   line-height: 50px
   margin-top: 32px
 
-
-.shopping_cart__a:hover
+.shopping-cart__a:hover
   color: $site-color
   border: 1px solid $site-color
 
-
-
-
-
-
-.shopping_cart
-  margin-top: 90px
-  margin-bottom: 80px
-
-
-.shopping_cart__h
+.shopping-cart__proceed
   @extend %space-between
-  margin-bottom: 20px
 
-
-.shopping_cart__item
-  @extend %space-between
-  border-top: 1px solid #eaeaea
-  padding: 25px 0
-
-
-.shopping_cart__item_l
-  @extend %space-between
-  border-top: 1px solid #eaeaea
-  border-bottom: 1px solid #eaeaea
-  padding: 25px 0
-
-
-.shopping_cart_box1
-  width: 439px
-  display: flex
-
-
-.shopping_cart_box2
-  width: 14%
-  text-align: center
-
-
-.shopping_cart_box3
-  width: 14%
-  text-align: center
-
-
-.shopping_cart_box4
-  width: 12%
-  text-align: center
-
-
-.shopping_cart_box5
-  width: 12%
-  text-align: center
-
-
-.shopping_cart_box6
-  width: 5%
-  text-align: center
-
-
-.shopping_cart__h1
-  color: $text-color
-  font-size: 13px
-  font-weight: 700
-  text-transform: uppercase
-  letter-spacing: -0.2px
-
-
-.shopping_cart_img
-  width: 100px
-  height: 115px
-
-
-.shopping_cart_box1_p
-  color: $text-color
-  font-size: 13px
-  font-weight: 700
-  text-transform: uppercase
-  margin: 13px 0 28px 0
-
-
-.shopping_cart_box1_img
-  margin-right: 21px
-
-
-.shopping_cart_box1_p1
-  margin-bottom: 5px
-  color: #575757
-
-
-.shopping_cart_box1_span
-  color: #575757
-  font-weight: 700
-
-
-.shopping_cart_center
-  display: flex
-  justify-content: center
-  align-items: center
-
-
-.shopping_cart_box1_p2
-  color: #656565
-  font-size: 13px
-  font-weight: 500
-
-
-.shopping_cart_box1_input
-  width: 54px
-  height: 30px
-  text-align: center
-
-
-
-
-
-.shopping_cart_box1_p3
-  color: #656565
-  font-size: 13px
-  font-weight: 400
-  text-transform: uppercase
-
-
-.shopping_cart_box6_i::after
-  content: "\f057"
-  font-family: $icon-font
-  color: #c0c0c0
-  font-size: 16px
-  font-weight: 400
-  text-transform: uppercase
-
-
-.shopping_cart__botton
-  @extend %space-between
-  margin-bottom: 63px
-
-
-.shopping_cart__proceed_box1
+.shopping-cart__proceed_box1
   width: 30%
 
-
-.shopping_cart__proceed_box2
+.shopping-cart__proceed_box2
   width: 30%
 
-
-.shopping_cart__proceed_box3
+.shopping-cart__proceed_box3
   @extend %column
   width: 25%
   height: 174px
@@ -2241,33 +1999,66 @@ details.products__category[open] .symbol__aside_3:after
   background-color: #f5f3f3
   align-items: flex-end
 
-
-.shopping_cart__proceed
-  @extend %space-between
-
-
-.shopping_cart_h1
+.shopping-cart_h1
   color: $text-color
   font-size: 16px
   font-weight: 700
   text-transform: uppercase
 
+.shopping-cart__details
+  width: 100%
+  height: 45px
+  text-align: center
+  border: 1px solid #eaeaea
+  margin-top: 22px
 
-.shopping_cart__input::placeholder
+.shopping-cart__summary
   color: #b1b1b1
   font-size: 13px
   font-weight: 300
+  line-height: 45px
+  text-align: left
+  padding-left: 20px
 
+.shopping-cart__summary::-webkit-details-marker
+  display: none
 
-.shopping_cart__input
+.shopping-cart__symbol:after
+  content: "\f0d7"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+  margin-left: 235px
+
+.products__drop__item_cart
+  background-color: #fff
+  text-align: left
+  padding-left: 12px
+  border: 1px solid #ebebeb
+  height: 30px
+  line-height: 30px
+  color: #6f6e6e
+  font-size: 13px
+  font-weight: 400
+
+.products__drop_cart
+  width: 342px
+  @extend %column
+  position: absolute
+  z-index: 2
+
+.shopping-cart__input
   width: 322px
   height: 45px
   padding-left: 20px
   border: 1px solid #eaeaea
   margin-top: 20px
 
+.shopping-cart__input::placeholder
+  color: #b1b1b1
+  font-size: 13px
+  font-weight: 300
 
-.shopping_cart__proceed_a
+.shopping-cart__proceed__a
   display: inline-block
   border: 1px solid #eaeaea
   height: 35px
@@ -2280,8 +2071,11 @@ details.products__category[open] .symbol__aside_3:after
   font-weight: 700
   text-transform: uppercase
 
+.shopping-cart__proceed__a:hover
+  border: 1px solid $site-color
+  color: $site-color
 
-.shopping_cart__proceed_box3_a
+.shopping-cart__proceed__box3__a
   display: inline-block
   background-color: $site-color
   height: 50px
@@ -2294,66 +2088,37 @@ details.products__category[open] .symbol__aside_3:after
   text-transform: uppercase
   border: 1px solid #f5f3f3
 
-
-.shopping_cart__proceed_box3_a:hover
+.shopping-cart__proceed__box3__a:hover
   background-color: #fff
   border: 1px solid $site-color
   color: $site-color
 
-
-.shopping_cart__proceed_a:hover
-  border: 1px solid $site-color
-  color: $site-color
-
-
-.shopping_cart__proceed_a_p
-  color: #4a4a4a
-  font-size: 11px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.shopping_cart_p
+.shopping-cart_p
   color: #000000
   font-size: 14px
   font-weight: 300
   margin-top: 28px
 
-
-.shopping_cart__proceed_box3_p
+.shopping-cart__proceed_box3_p
   color: #4a4a4a
   font-size: 11px
   font-weight: 400
   text-transform: uppercase
 
-
-.shopping_cart__proceed_box3_p2
+.shopping-cart__proceed_box3_p2
   color: $text-color
   font-size: 16px
   font-weight: 700
   text-transform: uppercase
   margin-top: 14px
 
-
-.shopping_cart__proceed_box3_p2 span
+.shopping-cart__proceed_box3_p2 span
   color: $site-color
 
-
-.shopping_cart__proceed_box3_hr
+.shopping-cart__proceed_box3_hr
   background-color: #e2e2e2
   width: 100%
   height: 1px
   text-decoration: none
   border: none
   margin: 20px 0
-
-
-
-
-
-
-
-
-
-
-
