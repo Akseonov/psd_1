@@ -1675,9 +1675,157 @@ details.products__category[open] .products__category_style
 .you-may-like__cont
   @extend %space-between
 
+.checkout
+  margin-top: 89px
+  margin-bottom: 93px
 
+.checkout__summary
+  color: $text-color
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  height: 72px
+  border-top: 1px solid #e8e8e8
+  border-bottom: 1px solid #e8e8e8
+  line-height: 72px
+  margin-bottom: -1px
 
+.checkout__summary::-webkit-details-marker
+  display: none
 
+.checkout__details__content
+  margin: 35px 0 79px 39px
+  display: flex
+
+.checkout__details__left
+  margin-right: 292px
+
+.checkout__details__h1
+  color: $text-color
+  font-size: 13px
+  font-weight: 700
+  text-transform: uppercase
+  margin-bottom: 10px
+
+.checkout__details__p
+  color: #b3b2b2
+  font-size: 13px
+  font-weight: 400
+
+.checkout__radio
+  color: $text-color
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  margin-top: 30px
+
+.checkout__radio__1
+  color: $text-color
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  margin-top: 20px
+  margin-bottom: 33px
+
+.checkout__radio__2
+  color: $text-color
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  margin-top: 30px
+
+.checkout__radio__2::after
+  content: " *"
+  font-size: 17px
+  color: #ff0d0d
+
+.checkout__reg
+  color: $text-color
+  font-size: 13px
+  font-weight: 400
+  text-transform: uppercase
+  margin-bottom: 15px
+
+.checkout__details__p1
+  color: #b3b2b2
+  font-size: 13px
+  font-weight: 400
+  margin-bottom: 15px
+
+.checkout__details__p1::before
+  content: "\f101"
+  font-family: $icon-font
+  +font(14px, 400, 0.35px)
+
+.checkout__details__p2
+  color: #b3b2b2
+  font-size: 13px
+  font-weight: 400
+  margin-bottom: 33px
+
+.checkout__details__a
+  color: #4a4a4a
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  border: 1px solid #eaeaea
+  width: 180px
+  height: 50px
+  display: block
+  text-align: center
+  line-height: 50px
+  margin-top: 38px
+
+.checkout__details__a:hover
+  color: #ff0d0d
+  border: 1px solid #ff0d0d
+
+.checkout__form
+  border-radius: 0 3px 3px 0
+  border: 1px solid #e6e6e6
+  background-color: #ffffff
+  height: 39px
+  width: 252px
+  margin-left: -1px
+  padding: 0 15px
+  margin-top: 16px
+
+.checkout__req
+  color: #ff0d0d
+  font-size: 13px
+  font-weight: 400
+  margin-top: 22px
+
+.checkout__log
+  display: flex
+
+.checkout__log__con
+  display: flex
+
+.checkout__log__a
+  color: #4a4a4a
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  border: 1px solid #eaeaea
+  width: 180px
+  height: 50px
+  display: block
+  text-align: center
+  line-height: 50px
+  margin-top: 32px
+
+.checkout__log__a:hover
+  color: #ff0d0d
+  border: 1px solid #ff0d0d
+
+.checkout__log__a__2
+  display: block
+  color: $text-color
+  font-size: 14px
+  font-weight: 400
+  margin-top: 56px
+  margin-left: 32px
 
 
 
@@ -1814,15 +1962,7 @@ details.products__category[open] .symbol__aside_3:after
   color: #ef5b70
 
 
-.checkout__form
-  border-radius: 0 3px 3px 0
-  border: 1px solid #e6e6e6
-  background-color: #ffffff
-  height: 39px
-  width: 252px
-  margin-left: -1px
-  padding: 0 15px
-  margin-top: 16px
+
 
 
 
@@ -1930,160 +2070,7 @@ details.products__category[open] .symbol__aside_3:after
 
 
 
-.checkout
-  margin-top: 89px
-  margin-bottom: 93px
 
-
-.checkout__h1
-  color: $text-color
-  font-size: 16px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.checkout__summary
-  color: $text-color
-  font-size: 16px
-  font-weight: 700
-  text-transform: uppercase
-  height: 72px
-  border-top: 1px solid #e8e8e8
-  border-bottom: 1px solid #e8e8e8
-  line-height: 72px
-  margin-bottom: -1px
-
-
-.checkout__summary::-webkit-details-marker
-  display: none
-
-
-.checkout__details__content
-  margin: 35px 0 79px 39px
-  display: flex
-
-
-.checkout__details_h1
-  color: $text-color
-  font-size: 13px
-  font-weight: 700
-  text-transform: uppercase
-  margin-bottom: 10px
-
-
-.checkout__details_p
-  color: #b3b2b2
-  font-size: 13px
-  font-weight: 400
-
-
-.checkout__radio
-  color: $text-color
-  font-size: 12px
-  font-weight: 700
-  text-transform: uppercase
-  margin-top: 30px
-
-
-.checkout__radio_2
-  color: $text-color
-  font-size: 12px
-  font-weight: 700
-  text-transform: uppercase
-  margin-top: 30px
-
-
-.checkout__radio_2::after
-  content: " *"
-  font-size: 17px
-  color: #ff0d0d
-
-
-.checkout__radio_1
-  color: $text-color
-  font-size: 12px
-  font-weight: 700
-  text-transform: uppercase
-  margin-top: 20px
-  margin-bottom: 33px
-
-
-.checkout__reg
-  color: $text-color
-  font-size: 13px
-  font-weight: 400
-  text-transform: uppercase
-  margin-bottom: 15px
-
-
-.checkout__details_p1
-  color: #b3b2b2
-  font-size: 13px
-  font-weight: 400
-  margin-bottom: 15px
-
-
-.checkout__details_p1::before
-  content: "\f101"
-  font-family: $icon-font
-  font-size: 14px
-  font-weight: 400
-  letter-spacing: 0.35px
-
-
-.checkout__details_p2
-  color: #b3b2b2
-  font-size: 13px
-  font-weight: 400
-  margin-bottom: 33px
-
-
-.checkout__details_a
-  color: #4a4a4a
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-  border: 1px solid #eaeaea
-  width: 180px
-  height: 50px
-  display: block
-  text-align: center
-  line-height: 50px
-  margin-top: 38px
-
-
-.checkout__details_a:hover
-  color: #ff0d0d
-  border: 1px solid #ff0d0d
-
-
-.checkout__details__left
-  margin-right: 292px
-
-
-.checkout__req
-  color: #ff0d0d
-  font-size: 13px
-  font-weight: 400
-  margin-top: 22px
-
-
-.checkout__log_con
-  display: flex
-
-
-.checkout__log_a
-  color: #4a4a4a
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-  border: 1px solid #eaeaea
-  width: 180px
-  height: 50px
-  display: block
-  text-align: center
-  line-height: 50px
-  margin-top: 32px
 
 
 .shopping_cart__a
@@ -2104,28 +2091,8 @@ details.products__category[open] .symbol__aside_3:after
   border: 1px solid $site-color
 
 
-.checkout__log_a:hover
-  color: #ff0d0d
-  border: 1px solid #ff0d0d
 
 
-.checkout__log_a_2
-  display: block
-  color: $text-color
-  font-size: 14px
-  font-weight: 400
-  margin-top: 56px
-  margin-left: 32px
-
-
-.checkout__log
-  display: flex
-
-
-.checkout__hr
-  border-style: none
-  background-color: #e8e8e8
-  height: 1px
 
 
 .shopping_cart
