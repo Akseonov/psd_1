@@ -3,13 +3,11 @@
 @import "extends"
 @import "mixins"
 
-
 body
   font-family: $main-font
 
 a
-  text-decoration: none
-  transition: color 0.5s
+  transition: color 0.5s, background-color 0.5s, outline-color 0.5s, border 0.5s
 
 .container
   width: 1140px
@@ -46,6 +44,7 @@ a
 .header__form
   @extend %align-items
   margin-left: 37px
+
   label
     display: none
 
@@ -483,6 +482,7 @@ a
   margin-top: 40px
   width: 263px
   position: relative
+
   img
     width: 263px
     height: 281px
@@ -501,13 +501,13 @@ a
 .feature__info
   padding: 20px 15px
 
-.feature__a
+.feature__info__a
   color: $text-color
   font-size: 13px
   font-weight: 400
   text-transform: uppercase
 
-.feature__a:hover
+.feature__info__a:hover
   color: $site-color
 
 .feature__a
@@ -625,6 +625,7 @@ a
   padding-left: 25px
   padding-right: 25px
   border: 1px solid $site-color
+  transition: color 0.5s, background-color 0.5s
 
 .button:hover
   background-color: #fff
@@ -814,6 +815,7 @@ a:hover .subscribe__link
 .subscribe__form
   @extend %align-items
   margin-left: 92px
+
   label
     display: none
 
@@ -836,7 +838,7 @@ a:hover .subscribe__link
   color: #ffffff
   +font(14px, 400, 0.35px)
   border: 1px solid $site-color
-  transition: background-color 1s, color 1s
+  transition: background-color 0.5s, color 0.5s, outline-color 0.5s
 
 .subscribe__button:hover
   background-color: #ffffff
@@ -906,7 +908,7 @@ a:hover .subscribe__link
 .footer__shop
   width: 164px
 
-.copyrigth
+.copyright
   height: 79px
   background-color: #e6e6e6
 
@@ -1101,12 +1103,10 @@ details.products__category[open] .symbol__aside_1:after
   font-family: $icon-font
   color: #ef5b70
 
-
 details.products__category[open] .symbol__aside_2:after
   content: "\f0d8"
   font-family: $icon-font
   color: #ef5b70
-
 
 details.products__category[open] .symbol__aside_3:after
   content: "\f0d8"
@@ -1190,6 +1190,7 @@ details.products__category[open] .symbol__aside_3:after
   display: flex
   flex-wrap: wrap
   width: 245px
+
   label
     display: none
 
@@ -1358,21 +1359,20 @@ details.products__category[open] .symbol__aside_3:after
 .fa-chevron-right:hover
   color: #ef5b70
 
-.products__buttom
+.products__button
   border-radius: 3px
   border: 1px solid #ef5b70
   background-color: #ffffff
-  transition: background-color 0.5s
 
-.products__buttom_a
+.products__button_a
   display: block
   color: #ef5b70
   font-size: 16px
   font-weight: bold
   padding: 15px 45px
-  transition: color 0.5s
+  transition: color 0.5s, background-color 0.5s
 
-.products__buttom_a:hover
+.products__button_a:hover
   background-color: #ef5b70
   color: #fff
 
@@ -1533,6 +1533,7 @@ details.products__category[open] .symbol__aside_3:after
 
 .product__description__choose__b
   width: 25%
+
   label
     display: none
 
@@ -1698,7 +1699,7 @@ details.products__category[open] .symbol__aside_3:after
   height: 26px
   width: 26px
   top: 14px
-  left: 209px
+  left: 207px
 
 .you-may-like
   margin-bottom: 73px

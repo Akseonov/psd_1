@@ -28,8 +28,7 @@ body {
   font-family: "Lato", sans-serif; }
 
 a {
-  text-decoration: none;
-  transition: color 0.5s; }
+  transition: color 0.5s, background-color 0.5s, outline-color 0.5s, border 0.5s; }
 
 .container {
   width: 1140px;
@@ -530,13 +529,13 @@ a {
 .feature__info {
   padding: 20px 15px; }
 
-.feature__a {
+.feature__info__a {
   color: #222222;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase; }
 
-.feature__a:hover {
+.feature__info__a:hover {
   color: #f16d7f; }
 
 .feature__a {
@@ -653,7 +652,8 @@ a {
   line-height: 48px;
   padding-left: 25px;
   padding-right: 25px;
-  border: 1px solid #f16d7f; }
+  border: 1px solid #f16d7f;
+  transition: color 0.5s, background-color 0.5s; }
 
 .button:hover {
   background-color: #fff;
@@ -880,7 +880,7 @@ a:hover .subscribe__link {
   font-weight: 400;
   letter-spacing: 0.35px;
   border: 1px solid #f16d7f;
-  transition: background-color 1s, color 1s; }
+  transition: background-color 0.5s, color 0.5s, outline-color 0.5s; }
 
 .subscribe__button:hover {
   background-color: #ffffff;
@@ -955,7 +955,7 @@ a:hover .subscribe__link {
 .footer__shop {
   width: 164px; }
 
-.copyrigth {
+.copyright {
   height: 79px;
   background-color: #e6e6e6; }
 
@@ -1388,21 +1388,20 @@ details.products__category[open] .symbol__aside_3:after {
 .fa-chevron-right:hover {
   color: #ef5b70; }
 
-.products__buttom {
+.products__button {
   border-radius: 3px;
   border: 1px solid #ef5b70;
-  background-color: #ffffff;
-  transition: background-color 0.5s; }
+  background-color: #ffffff; }
 
-.products__buttom_a {
+.products__button_a {
   display: block;
   color: #ef5b70;
   font-size: 16px;
   font-weight: bold;
   padding: 15px 45px;
-  transition: color 0.5s; }
+  transition: color 0.5s, background-color 0.5s; }
 
-.products__buttom_a:hover {
+.products__button_a:hover {
   background-color: #ef5b70;
   color: #fff; }
 
@@ -1731,7 +1730,7 @@ details.products__category[open] .symbol__aside_3:after {
   height: 26px;
   width: 26px;
   top: 14px;
-  left: 209px; }
+  left: 207px; }
 
 .you-may-like {
   margin-bottom: 73px; }
