@@ -1975,7 +1975,9 @@ details.products__category[open] .symbol__aside_3:after {
 .shopping-cart__box1__input {
   width: 54px;
   height: 30px;
-  text-align: center; }
+  text-align: center;
+  border: 1px solid #eaeaea;
+  color: #656565; }
 
 .shopping-cart__box1__p3 {
   color: #656565;
