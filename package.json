@@ -1,0 +1,26 @@
+{
+  "name": "psd_1",
+  "version": "1.0.0",
+  "description": "1nd layout for online store",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akseonov/psd_1.git"
+  },
+  "author": "Malcador malcadorssigil@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akseonov/psd_1/issues"
+  },
+  "homepage": "https://github.com/Akseonov/psd_1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}
