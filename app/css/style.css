@@ -228,19 +228,13 @@ a {
 
 .header__cart {
   margin-right: 27px;
-  padding-top: 14px;
-  padding-right: 2px;
-  padding-bottom: 5px;
-  padding-left: 7px; }
+  padding: 14px 2px 5px 7px; }
 
 .header__cart:hover {
   box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   margin-right: 27px;
-  padding-top: 14px;
-  padding-right: 2px;
-  padding-bottom: 5px;
-  padding-left: 7px;
+  padding: 14px 2px 5px 7px;
   transition: box-shadow 0.5s linear; }
 
 .header__cart__block:hover .cart__drop {
@@ -378,10 +372,7 @@ a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-left: 23px;
-  padding-right: 23px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 23px;
   display: block; }
 
 .menu__link:hover {
@@ -507,10 +498,7 @@ a {
 
 .offer__text {
   background-color: #fff;
-  padding-left: 19px;
-  padding-right: 18px;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  padding: 13px 18px 12px 19px;
   margin-top: 25px; }
 
 .offer__h4 {
@@ -591,10 +579,7 @@ a {
   filter: brightness(50%); }
 
 .feature__info {
-  padding-top: 10px;
-  padding-bottom: 20px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding: 10px 15px 20px 15px; }
 
 .feature__info__a {
   color: #222222;
@@ -2258,10 +2243,7 @@ details.products__category[open] .symbol__aside_3:after {
 
 .shopping-cart__input {
   width: 317px;
-  padding-left: 15px;
-  padding-right: 20px;
-  padding-top: 9px;
-  padding-bottom: 16px;
+  padding: 9px 20px 16px 15px;
   border: 1px solid #eaeaea;
   margin-top: 19px; }
 
