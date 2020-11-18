@@ -1977,15 +1977,15 @@ details.products__category[open] .symbol__aside_3:after
   margin-left: 32px
 
 .shopping-cart
-  margin-top: 90px
-  margin-bottom: 80px
+  margin-top: 86px
+  margin-bottom: 78px
 
 .shopping-cart__h
   @extend %space-between
-  margin-bottom: 20px
+  margin-bottom: 16px
 
 .shopping-cart__box1
-  width: 439px
+  width: 463px
   display: flex
 
 .shopping-cart__box2
@@ -1993,11 +1993,11 @@ details.products__category[open] .symbol__aside_3:after
   text-align: center
 
 .shopping-cart__box3
-  width: 14%
+  width: 12%
   text-align: center
 
 .shopping-cart__box4
-  width: 12%
+  width: 11%
   text-align: center
 
 .shopping-cart__box5
@@ -2020,21 +2020,48 @@ details.products__category[open] .symbol__aside_3:after
 .shopping-cart__item
   @extend %space-between
   border-top: 1px solid #eaeaea
-  padding: 25px 0
+  //padding: 25px 0
+  padding-bottom: 23px
+  padding-top: 25px
 
 .shopping-cart__item_l
   border-bottom: 1px solid #eaeaea
 
 .shopping-cart__box1__img
-  margin-right: 21px
+  margin-right: 18px
 
 .shopping-cart__img
   width: 100px
   height: 115px
 
+.shopping-cart__box
+  margin-top: 10px
+
+.shopping-cart__h1
+  color: #222222
+  font-family: Lato
+  font-size: 13px
+  font-weight: 600
+  letter-spacing: -0.2px
+
+.shopping-cart__h2
+  color: #222222
+  font-family: Lato
+  font-size: 13px
+  font-weight: 700
+  letter-spacing: 0.4px
+  text-transform: uppercase
+
+.shopping-cart__box1__p0
+  margin-bottom: 1px
+  color: #6f6e6e
+  margin-top: 31px
+  letter-spacing: -0.7px
+
 .shopping-cart__box1__p1
   margin-bottom: 5px
-  color: #575757
+  color: #6f6e6e
+  letter-spacing: -0.7px
 
 .shopping-cart__box1__span
   color: #575757
@@ -2075,7 +2102,7 @@ details.products__category[open] .symbol__aside_3:after
 
 .shopping-cart__button
   @extend %space-between
-  margin-bottom: 63px
+  margin-bottom: 57px
 
 .shopping-cart__a
   color: #4a4a4a
@@ -2087,7 +2114,7 @@ details.products__category[open] .symbol__aside_3:after
   display: block
   text-align: center
   line-height: 50px
-  margin-top: 32px
+  margin-top: 42px
 
 .shopping-cart__a:hover
   color: $site-color
@@ -2101,6 +2128,7 @@ details.products__category[open] .symbol__aside_3:after
 
 .shopping-cart__proceed_box2
   width: 30%
+  margin-left: 10px
 
 .shopping-cart__proceed_box3
   @extend %column
@@ -2117,11 +2145,11 @@ details.products__category[open] .symbol__aside_3:after
   text-transform: uppercase
 
 .shopping-cart__details
-  width: 100%
+  width: 352px
   height: 45px
   text-align: center
   border: 1px solid #eaeaea
-  margin-top: 22px
+  margin-top: 18px
 
 .shopping-cart__summary
   color: #b1b1b1
@@ -2129,7 +2157,7 @@ details.products__category[open] .symbol__aside_3:after
   font-weight: 300
   line-height: 45px
   text-align: left
-  padding-left: 20px
+  padding-left: 16px
 
 .shopping-cart__summary::-webkit-details-marker
   display: none
@@ -2138,7 +2166,7 @@ details.products__category[open] .symbol__aside_3:after
   content: "\f0d7"
   font-family: $icon-font
   +font(14px, 400, 0.35px)
-  margin-left: 235px
+  margin-left: 252px
 
 .products__drop__item_cart
   background-color: #fff
@@ -2158,24 +2186,29 @@ details.products__category[open] .symbol__aside_3:after
   z-index: 2
 
 .shopping-cart__input
-  width: 302px
-  height: 45px
-  padding-left: 20px
+  width: 317px
+  padding-left: 15px
   padding-right: 20px
+  padding-top: 9px
+  padding-bottom: 16px
   border: 1px solid #eaeaea
-  margin-top: 20px
+  margin-top: 19px
 
 .shopping-cart__input::placeholder
   color: #b1b1b1
   font-size: 13px
   font-weight: 300
+  line-height: 42px
+
+.shopping-cart__input_m
+  margin-top: 24px
 
 .shopping-cart__proceed__a
   display: inline-block
   border: 1px solid #eaeaea
   height: 35px
-  padding: 0 17px
-  margin-top: 20px
+  padding: 0 14px
+  margin-top: 22px
   line-height: 35px
   text-align: center
   color: #4a4a4a
@@ -2191,7 +2224,7 @@ details.products__category[open] .symbol__aside_3:after
   display: inline-block
   background-color: $site-color
   height: 50px
-  padding: 0 46px
+  padding: 0 42px
   line-height: 50px
   text-align: center
   color: #ffffff
@@ -2209,13 +2242,18 @@ details.products__category[open] .symbol__aside_3:after
   color: #000000
   font-size: 14px
   font-weight: 300
-  margin-top: 28px
+  margin-top: 23px
+
+.shopping-cart__proceed_box3
+  width: 277px
 
 .shopping-cart__proceed_box3_p
   color: #4a4a4a
   font-size: 11px
   font-weight: 400
   text-transform: uppercase
+  letter-spacing: 0.4px
+  padding-top: 1px
 
 .shopping-cart__proceed_box3_p2
   color: $text-color
@@ -2223,6 +2261,7 @@ details.products__category[open] .symbol__aside_3:after
   font-weight: 700
   text-transform: uppercase
   margin-top: 14px
+  letter-spacing: 0.2px
 
 .shopping-cart__proceed_box3_p2 span
   color: $site-color
@@ -2233,4 +2272,5 @@ details.products__category[open] .symbol__aside_3:after
   height: 1px
   text-decoration: none
   border: none
-  margin: 20px 0
+  margin-bottom: 16px
+  margin-top: 20px
