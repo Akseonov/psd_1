@@ -3,21 +3,33 @@
 @import "extends"
 @import "mixins"
 
+html, body
+  height: 100%
+
 body
   font-family: $main-font
 
 a
   transition: color 0.5s, background-color 0.5s, outline-color 0.5s, border 0.5s
 
+.wrapper
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+.top
+  flex-grow: 1
+
 .container
-  width: 1140px
+  width: $site-width
   margin: 0 auto
 
 .header
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17)
   border: 1px solid #ececec
   background-color: #ffffff
-  height: 100px
+  height: 96px
+  min-width: $site-width
 
 .header__content
   height: 100%
@@ -28,13 +40,17 @@ a
 
 .header__logo
   color: $text-color
+  padding-top: 4px
+  letter-spacing: 0.6px
   font-size: 27px
   font-weight: 300
   text-transform: uppercase
   @extend %align-items
 
   img
-    margin-right: 13px
+    margin-right: 7px
+    padding-bottom: 5px
+    padding-left: 1px
 
   span
     color: $site-color
@@ -53,14 +69,14 @@ a
   border: 1px solid #e6e6e6
   background-color: #cdcdcc
   background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%)
-  padding-right: 14px
-  padding-left: 14px
-  line-height: 38px
+  padding-right: 9px
+  padding-left: 12px
+  line-height: 36px
   position: relative
 
 .form__browse
   color: $text-color
-  +font(14px, 500, 0.35px)
+  +font(14px, 500, 0.1px)
 
 .form__browse::-webkit-details-marker
   display: none
@@ -131,10 +147,11 @@ a
   border-radius: 0 3px 3px 0
   border: 1px solid #e6e6e6
   background-color: #ffffff
-  height: 39px
-  width: 252px
+  height: 36px
+  width: 248px
   margin-left: -1px
   padding: 0 15px
+  line-height: 36px
 
 .header__form__input:after
   content: "\f002"
@@ -142,26 +159,38 @@ a
   color: #a4a4a4
   +font(14px, 400, 0.35px)
 
+.header__form__input::placeholder
+  font-family: Lato
+  +font(14px, 300, 0.35px)
+  line-height: 32px
+
 .header__form__button
   margin-left: -1px
   border-radius: 0 3px 3px 0
   border: 1px solid #e6e6e6
   background-color: #ffffff
-  height: 41px
-  width: 36px
+  height: 38px
+  width: 37px
   @extend %align-items
   justify-content: center
+  transition: background-color 0.5s
+
+.header__form__button:hover
+  background-color: #f5f5f5
+  .fa-search
+    color: #222222
 
 .fa-search
   color: #a4a4a4
   +font(14px, 400, 0.35px)
+  transition: color 0.5s
 
 .header__cart__block
   position: relative
 
 .header__cart
-  margin-right: 16px
-  padding: 10px
+  margin-right: 27px
+  padding-top: 10px
 
 .header__cart:hover
   box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2)
@@ -277,8 +306,8 @@ a
   +font(15px, 400, 0.38px)
   height: 38px
   line-height: 38px
-  padding-left: 19px
-  padding-right: 19px
+  padding-left: 16px
+  padding-right: 13px
   outline: 1px solid $site-color
   transition: color 0.5s, background-color 0.5s, outline-color 0.5s
 
@@ -290,7 +319,8 @@ a
   @extend %align-items
   justify-content: center
   list-style-type: none
-  height: 51px
+  height: 47px
+  padding-bottom: 5px
 
 .menu__list
   position: relative
@@ -303,7 +333,8 @@ a
   font-size: 14px
   font-weight: 700
   text-transform: uppercase
-  padding: 20px
+  padding-left: 23px
+  padding-right: 23px
   display: block
 
 .menu__link:hover
@@ -378,11 +409,12 @@ a
   height: 100%
   @extend %align-items
   background-image: url("../img/promo.jpg")
-  background-position: 0 -52px
+  background-position: 5px -53px
 
 .promo__text
   border-left: 12px solid $site-color
   padding-left: 12px
+  margin-bottom: 75px
 
 .promo__h3
   color: $text-color
@@ -390,7 +422,8 @@ a
   font-weight: 700
   text-transform: uppercase
   line-height: 43px
-  margin-bottom: 15px
+  margin-bottom: 19px
+  letter-spacing: 1.8px
 
 .promo__h4
   color: $text-color
@@ -398,6 +431,7 @@ a
   font-weight: 700
   text-transform: uppercase
   line-height: 33px
+  letter-spacing: 1.2px
 
 .promo__span
   color: $site-color
@@ -426,8 +460,11 @@ a
 
 .offer__text
   background-color: #fff
-  padding: 16px 19px
-  margin-top: 26px
+  padding-left: 19px
+  padding-right: 18px
+  padding-top: 13px
+  padding-bottom: 12px
+  margin-top: 25px
 
 .offer__h4
   color: $text-color
@@ -463,15 +500,15 @@ a
 .feature__header
   text-align: center
   color: $text-color
-  +font(30px, 900, 0.75px)
+  +font(30px, 900, 0.6px)
   line-height: 23px
 
 .feature__h2
   color: #9f9f9f
   +font(14px, 400, 0.35px)
   text-align: center
-  margin-top: 16px
-  margin-bottom: 30px
+  margin-top: 14px
+  margin-bottom: 25px
   line-height: 12px
 
 .feature__content
@@ -479,13 +516,14 @@ a
   flex-wrap: wrap
 
 .feature__item
-  margin-top: 40px
+  margin-top: 36px
   width: 263px
   position: relative
-
+  transition: box-shadow 0.5s
   img
     width: 263px
     height: 281px
+    transition: filter 0.5s
 
 .feature__item:hover
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
@@ -499,12 +537,14 @@ a
   filter: brightness(50%)
 
 .feature__info
-  padding: 20px 15px
+  padding-top: 10px
+  padding-bottom: 20px
+  padding-right: 15px
+  padding-left: 15px
 
 .feature__info__a
   color: $text-color
-  font-size: 13px
-  font-weight: 400
+  +font(13px, 400, 0.37px)
   text-transform: uppercase
 
 .feature__info__a:hover
@@ -562,6 +602,7 @@ a
   height: 23px
   width: 23px
   margin-right: 10px
+  transition: background-image 0.5s
 
 .feature__a_2:before
   content: ""
@@ -606,23 +647,21 @@ a
   font-size: 16px
   font-weight: 700
   text-transform: uppercase
-  margin-top: 15px
+  margin-top: 12px
 
 .feature__button
   display: flex
   justify-content: center
-  margin-top: 60px
-  margin-bottom: 115px
+  margin-top: 59px
+  margin-bottom: 112px
 
 .button
   color: #ffffff
   background-color: $site-color
-  font-size: 15px
-  font-weight: 400
-  letter-spacing: 0.38px
-  height: 48px
-  line-height: 48px
-  padding-left: 25px
+  +font(15px, 400, 1px)
+  height: 46px
+  line-height: 44px
+  padding-left: 22px
   padding-right: 25px
   border: 1px solid $site-color
   transition: color 0.5s, background-color 0.5s
@@ -634,14 +673,14 @@ a
 .symbol__arrow:after
   content: "\f178"
   font-family: $icon-font
-  +font(14px, 400, 0.35px)
-  margin-left: 8px
+  +font(14px, 400, -9.65px)
+  margin-left: 12px
 
 .sales
   @extend %align-items
   height: 532px
   background-color: #222224
-  margin-bottom: 98px
+  margin-bottom: 95px
 
 .sales__big
   position: relative
@@ -653,13 +692,14 @@ a
 
 .sales__text
   position: absolute
-  top: 146px
+  top: 133px
   left: 39px
 
 .sales__h3
   color: #ffffff
-  +font(54px, 700, 1.5px)
+  +font(54px, 700, 1.05px)
   text-transform: uppercase
+  line-height: 61px
 
 .sales__span
   font-size: 54px
@@ -669,7 +709,7 @@ a
 
 .sales__h4
   color: #ffffff
-  +font(32px, 700, 0.9px)
+  +font(32px, 700, 0.7px)
   text-transform: uppercase
 
 .sales__mini
@@ -693,7 +733,7 @@ a
 .sales__h2_2
   color: #fbfbfb
   +font(20px, 700, 0.5px)
-  margin-top: 55px
+  margin-top: 58px
   display: flex
 
 .sales__h2_2:before
@@ -701,21 +741,21 @@ a
   width: 40px
   height: 40px
   margin-left: 36px
-  margin-right: 30px
+  margin-right: 36px
   margin-top: -6px
 
 .sales__h2_3
   color: #fbfbfb
   +font(20px, 700, 0.5px)
-  margin-top: 55px
+  margin-top: 52px
   display: flex
 
 .sales__h2_3:before
   content: url("../img/sales_icon3.svg")
   width: 47px
   height: 35px
-  margin-left: 36px
-  margin-right: 30px
+  margin-left: 32px
+  margin-right: 33px
   margin-top: -6px
 
 .sales__p
@@ -725,15 +765,17 @@ a
   margin-left: 111px
   margin-right: 43px
   line-height: 1.7
+  letter-spacing: 0.3px
+  margin-top: 3px
 
 .subscribe
-  height: 438px
   @extend %align-items
   background: url("../img/2-layers.jpg") no-repeat center
   background-size: cover
+  min-width: $site-width
+  background-position-x: -127px
 
 .subscribe__content
-  height: 100%
   @extend %align-items
 
 .subscribe__left
@@ -751,11 +793,11 @@ a
   color: #222224
   font-size: 16px
   font-style: italic
-  letter-spacing: 0.4px
+  letter-spacing: -0.1px
   display: flex
-  width: 530px
+  width: 500px
   line-height: 1.7
-  margin-top: 123px
+  margin-top: 116px
 
 .subscribe__p:before
   content: url("../img/subscribe_photo.png")
@@ -765,28 +807,29 @@ a
   margin-right: 28px
 
 .subscribe__h3
-  margin-top: 19px
+  margin-top: 7px
   color: $site-color
-  font-size: 16px
-  font-weight: 700
-  margin-left: 115px
+  +font(16px, 700, 0.4px)
+  margin-left: 112px
 
 .subscribe__h4
-  +font(12px, 700, 0.3px)
+  +font(12px, 700, 0.1px)
   color: #222224
-  margin-left: 115px
+  margin-left: 112px
 
 .subscribe__ul
   display: flex
   list-style-type: none
-  margin-top: 41px
+  margin-top: 40px
   margin-left: 115px
+  margin-bottom: 157px
 
 .subscribe__link
   background-color: #d6d6d6
   height: 4px
   width: 38px
   margin-right: 13px
+  transition: background-color 0.5s
 
 a:focus .subscribe__link
   background-color: $site-color
@@ -801,16 +844,16 @@ a:hover .subscribe__link
   color: #222224
   +font(24px, 400, 0.6px)
   text-transform: uppercase
-  margin-bottom: 5px
-  margin-top: 148px
-  margin-left: 219px
+  margin-left: 217px
+  margin-top: -28px
 
 .subscribe__h2
   color: #222224
   +font(14px, 400, 0.35px)
   text-transform: uppercase
   margin-left: 146px
-  margin-bottom: 35px
+  margin-bottom: 31px
+  margin-top: 3px
 
 .subscribe__form
   @extend %align-items
@@ -825,14 +868,18 @@ a:hover .subscribe__link
   background-color: #e1e1e1
   border: 1px solid #e6e6e6
   height: 46px
-  width: 222px
-  padding: 0 30px
+  width: 232px
+  padding: 0 25px
+
+.subscribe__input::placeholder
+  letter-spacing: -0.6px
+  line-height: 46px
 
 .subscribe__button
   height: 46px
-  padding-left: 18px
+  padding-left: 20px
   padding-right: 20px
-  margin-left: -1px
+  margin-left: -3px
   border-radius: 0 23px 23px 0
   background-color: $site-color
   color: #ffffff
@@ -844,13 +891,10 @@ a:hover .subscribe__link
   background-color: #ffffff
   color: $site-color
 
-.footer
-  height: 349px
-
 .footer__content
-  height: 100%
   @extend %space-between
-  margin-top: 109px
+  margin-top: 111px
+  margin-bottom: 84px
 
 .footer__about
   width: 427px
@@ -864,7 +908,7 @@ a:hover .subscribe__link
   align-items: center
 
 .footer__logo__img
-  margin-right: 13px
+  margin-right: 10px
 
 .footer__logo_d
   color: #f16d7f
@@ -874,11 +918,17 @@ a:hover .subscribe__link
 .footer__p
   color: #898989
   +font(14px, 300, 0.35px)
-  margin-top: 29px
+  margin-top: 19px
   line-height: 24px
+  width: 431px
+
+.footer__p_bot
+  margin-top: 24px
 
 .footer__company
   width: 105px
+  margin-left: -11px
+  margin-top: 7px
 
 .footer__span
   color: $site-color
@@ -890,10 +940,10 @@ a:hover .subscribe__link
   height: 51px
   justify-content: center
   align-items: center
-  margin-top: 45px
+  margin-top: 36px
 
 .footer_li
-  margin-bottom: 25px
+  margin-bottom: 23px
 
 .footer__list
   color: #898989
@@ -904,13 +954,18 @@ a:hover .subscribe__link
 
 .footer__inform
   width: 150px
+  margin-left: 53px
+  margin-top: 7px
 
 .footer__shop
   width: 164px
+  margin-right: 33px
+  margin-top: 7px
 
 .copyright
   height: 79px
   background-color: #e6e6e6
+  min-width: $site-width
 
 .copyright__content
   height: 100%
@@ -919,13 +974,13 @@ a:hover .subscribe__link
 
 .copyright_span
   color: #7a7a7a
-  +font(16px, 400, 0.4px)
+  +font(16px, 400, 0.6px)
 
 .copyright__social
   display: flex
 
 .copyright__social a
-  margin-right: 8px
+  margin-left: 8px
 
 .copyright__link
   height: 32px
@@ -1023,6 +1078,7 @@ a:hover .subscribe__link
 
 .breadcrumb
   background-color: #f8f3f4
+  min-width: $site-width
 
 .breadcrumb__content
   @extend %space-between
@@ -1293,6 +1349,7 @@ details.products__category[open] .symbol__aside_3:after
   margin-bottom: 40px
   width: 263px
   position: relative
+  transition: box-shadow 0.5s
 
 .products__feature__item:hover
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
@@ -1300,6 +1357,7 @@ details.products__category[open] .symbol__aside_3:after
 .products__feature__item img
   width: 263px
   height: 280px
+  transition: filter 0.5s
 
 .products__feature__item:hover img
   filter: brightness(50%)
@@ -1345,6 +1403,7 @@ details.products__category[open] .symbol__aside_3:after
   font-size: -20px
   font-weight: bold
   letter-spacing: 0.35px
+  transition: color 0.5s
 
 .fa-chevron-left
   color: #aaaaaa
@@ -1352,6 +1411,7 @@ details.products__category[open] .symbol__aside_3:after
   font-weight: bold
   letter-spacing: 0.35px
   margin-right: 12px
+  transition: color 0.5s
 
 .fa-chevron-left:hover
   color: #ef5b70
@@ -1378,11 +1438,13 @@ details.products__category[open] .symbol__aside_3:after
 
 .sales__prod
   background-color: #222224
+  min-width: $site-width
 
 .sales__mini__cat
   @extend %space-between
   align-items: center
-  height: 341px
+  padding-top: 95px
+  padding-bottom: 95px
 
 .sales__container__cat
   @extend %column
@@ -1412,11 +1474,13 @@ details.products__category[open] .symbol__aside_3:after
 
 .slider
   background: url(../img/slider1.jpg) no-repeat center
+  background-color: #f7f7f7
   height: 777px
   @extend %space-between
   align-items: center
   position: relative
   z-index: -11
+  min-width: $site-width
 
 .arrow_left
   width: 47px
@@ -1684,8 +1748,17 @@ details.products__category[open] .symbol__aside_3:after
   justify-content: center
   position: relative
 
-.product__description__button img
+.product__description__button::before
+  content: ""
+  position: absolute
+  background-image: url(../img/cart_pink.svg)
+  background-size: 26px 26px
+  height: 26px
+  width: 26px
+  top: 14px
+  left: 192px
   margin-right: 15px
+  transition: background-image 0.5s
 
 .product__description__button:hover
   background-color: #ef5b70
@@ -1699,7 +1772,7 @@ details.products__category[open] .symbol__aside_3:after
   height: 26px
   width: 26px
   top: 14px
-  left: 207px
+  left: 192px
 
 .you-may-like
   margin-bottom: 73px
@@ -2049,9 +2122,10 @@ details.products__category[open] .symbol__aside_3:after
   z-index: 2
 
 .shopping-cart__input
-  width: 322px
+  width: 302px
   height: 45px
   padding-left: 20px
+  padding-right: 20px
   border: 1px solid #eaeaea
   margin-top: 20px
 
