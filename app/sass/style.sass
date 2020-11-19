@@ -160,7 +160,7 @@ a
   +font(14px, 400, 0.35px)
 
 .header__form__input::placeholder
-  font-family: Lato
+  font-family: $main-font
   +font(14px, 300, 0.35px)
   line-height: 32px
 
@@ -1495,8 +1495,8 @@ details.products__category[open] .symbol__aside_3:after
   text-align: justify
 
 .slider
-  background: url(../img/slider1.jpg) no-repeat center
-  background-color: #f7f7f7
+  background: url(../img/slider1.jpg) no-repeat center, #f7f7f7
+  //background-color: #f7f7f7
   height: 777px
   @extend %space-between
   align-items: center
@@ -1744,8 +1744,7 @@ details.products__category[open] .symbol__aside_3:after
   font-weight: 400
 
 .product__description__choose__input
-  width: 100%
-  width: 130px
+  width: 126px
   height: 33px
   text-align: center
   border: 1px solid #eaeaea
@@ -2028,14 +2027,14 @@ details.products__category[open] .symbol__aside_3:after
 
 .shopping-cart__h1
   color: #222222
-  font-family: Lato
+  font-family: $main-font
   font-size: 13px
   font-weight: 600
   letter-spacing: -0.2px
 
 .shopping-cart__h2
   color: #222222
-  font-family: Lato
+  font-family: $main-font
   font-size: 13px
   font-weight: 700
   letter-spacing: 0.4px
